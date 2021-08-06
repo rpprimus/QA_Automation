@@ -45,6 +45,10 @@
   <ItemGroup>
     <Folder Include="Drivers\" />
     <Folder Include="ExtentReport\" />
+    <Folder Include="ExtentReport\ScreenShot\" />
+    <Folder Include="PageObjects\" />
+    <Folder Include="Tests\FeatureFiles\" />
+    <Folder Include="Tests\Steps\" />
   </ItemGroup>
 
   <ItemGroup>
