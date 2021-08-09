@@ -34,15 +34,5 @@ namespace Affordit_Automation.PageObjects
         {
             SendKeys(secnumber2, sn2, true);
         }
-
-
-
-
-
-
-
-
-
-
     }
 }

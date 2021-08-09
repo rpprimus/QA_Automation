@@ -43,6 +43,7 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Click on personal information")]
         public void ThenClickOnPersonalInformation()
         {
+            Thread.Sleep(2000);
             IWebElement personalInfo = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[1]/mat-step-header[3]")));
             act.MoveToElement(personalInfo).Click().Build().Perform();
 

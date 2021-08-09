@@ -30,6 +30,7 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Click on Employment Button")]
         public void ThenClickOnEmploymentButton()
         {
+            Thread.Sleep(2000);
             IWebElement EmploymentButton = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[1]/mat-step-header[4]/div[1]")));
             act.MoveToElement(EmploymentButton).Click().Build().Perform();
 
@@ -120,7 +121,7 @@ namespace Affordit_Automation.Tests.Steps
         {
                 IWebElement CoborrowerAddressLineSecond = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[4]/app-employment/div/div[2]/form/div[4]/div/div[2]/mat-form-field/div/div[1]/div/input")));
                 CoborrowerAddressLineSecond.Click();
-                CoborrowerAddressLineSecond.SendKeys("Suite 100b Unit 5"); 
+                CoborrowerAddressLineSecond.SendKeys("Suite 100b Unit 5");
         }
 
         [Then(@"Click Next for Income and Asset Details")]

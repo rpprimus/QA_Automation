@@ -56,6 +56,7 @@ namespace Affordit_Automation.Tests.Steps
         {
             IWebElement NextIconForLoanType = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[1]/app-credit-record/div/div[2]/div/a[2]")));
             NextIconForLoanType.Click();
+            Thread.Sleep(2000);
         }
         [Then(@"Click MORTGAGE Icon")]
         public void ThenClickMORTGAGEIcon()
@@ -133,6 +134,7 @@ namespace Affordit_Automation.Tests.Steps
         {
             IWebElement LoanRequestForPERSONAL = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[2]/app-loan-type/div/div[2]/form/div[2]/div[1]/ng-select/div/div/div[2]/input")));
             LoanRequestForPERSONAL.Click();
+            Thread.Sleep(2000);
             IWebElement select = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[4]")));
             select.Click();
         }

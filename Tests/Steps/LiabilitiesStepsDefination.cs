@@ -28,12 +28,14 @@ namespace Affordit_Automation.Tests.Steps
         {
             _driver = driver;
             _propertyReader = PropertyReader.Instance;
+
             act = new Actions(driver);
             wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(20));
         }
         [Then(@"Select Yes")]
         public void ThenSelectYes()
         {
+            Thread.Sleep(2000);
             IWebElement Yesbtn = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[1]/app-credit-record/div/div[2]/form/div[1]/div/div/mat-button-toggle-group/mat-button-toggle[1]/button")));
             act.MoveToElement(Yesbtn).Click().Build().Perform();
         }
