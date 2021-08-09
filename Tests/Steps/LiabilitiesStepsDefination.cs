@@ -28,14 +28,12 @@ namespace Affordit_Automation.Tests.Steps
         {
             _driver = driver;
             _propertyReader = PropertyReader.Instance;
-  
             act = new Actions(driver);
             wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(20));
         }
         [Then(@"Select Yes")]
         public void ThenSelectYes()
         {
-            Thread.Sleep(2000);
             IWebElement Yesbtn = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[1]/app-credit-record/div/div[2]/form/div[1]/div/div/mat-button-toggle-group/mat-button-toggle[1]/button")));
             act.MoveToElement(Yesbtn).Click().Build().Perform();
         }
@@ -44,9 +42,9 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Click on Liabilities")]
         public void ThenClickOnLiabilities()
         {
-           
+
             IWebElement Liabilities = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[1]/mat-step-header[6]")));
-              Liabilities.Click(); 
+            Liabilities.Click();
         }
 
         [Then(@"click Add Liabilities")]
@@ -70,7 +68,7 @@ namespace Affordit_Automation.Tests.Steps
             IWebElement BalanceAmount = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[3]/div[3]/mat-form-field/div/div[1]/div/input")));
             BalanceAmount.Click();
             BalanceAmount.SendKeys("2000");
-            
+
         }
         [Then(@"Click the Dropdown Icon")]
         public void ThenClickTheDropdownIcon()
@@ -78,7 +76,7 @@ namespace Affordit_Automation.Tests.Steps
             IWebElement DropdownIcon = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[3]/div[4]/div/a/i")));
             DropdownIcon.Click();
         }
-    
+
         [Then(@"Click on Original Loan Amount")]
         public void ThenClickOnOriginalLoanAmount()
         {
@@ -110,19 +108,18 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Enter Year")]
         public void ThenEnterYear()
         {
-            IWebElement EnterYear = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[4]/div[5]/div[2]/div[1]/ng-select/div/div/div[2]/input")));           EnterYear.Click();
+            IWebElement EnterYear = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[4]/div[5]/div[2]/div[1]/ng-select/div/div/div[2]/input"))); EnterYear.Click();
             EnterYear.Click();
 
             IWebElement Select = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[5]")));
             Select.Click();
-            _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(40);
         }
         [Then(@"Enter Make")]
         public void ThenEnterMake()
         {
             IWebElement EnterMake = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[4]/div[5]/div[2]/div[2]/ng-select/div/div/div[2]/input")));
             EnterMake.Click();
-            
+
             IWebElement Select = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[4]")));
             Select.Click();
         }
@@ -153,8 +150,8 @@ namespace Affordit_Automation.Tests.Steps
         {
             try
             {
-                IWebElement ModalBlankCredit = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/div[2]/a[2]")));
-                act.MoveToElement(ModalBlankCredit).Click().Build().Perform();
+                IWebElement NextPageIcon = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/div[2]/a[2]")));
+                act.MoveToElement(NextPageIcon).Click().Build().Perform();
             }
             catch (Exception ex)
             {
@@ -164,10 +161,10 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Click Next Page Icon for CoBorrower")]
         public void ThenClickNextPageIconForCoBorrower()
         {
-            IWebElement ClickAddLiabilitiesButtonForCoborrower = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/div[2]/a[2]")));
-            ClickAddLiabilitiesButtonForCoborrower.Click();
+            IWebElement NextPageIconForCoBorrower = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/div[2]/a[2]")));
+            NextPageIconForCoBorrower.Click();
         }
-    
+
 
         [Then(@"Click Add Liabilities Button for CoBorrower")]
         public void ThenClickAddLiabilitiesButtonForCoborrower()
@@ -196,15 +193,12 @@ namespace Affordit_Automation.Tests.Steps
             IWebElement DropdownIconForCoborrower = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div[1]/app-liability/div/mat-card/div[3]/div[4]/div/a")));
             DropdownIconForCoborrower.Click();
         }
-    
+
         [Then(@"Check the Special Interest Checkbox for CoBorrower")]
         public void ThenCheckTheSpecialInterestCheckboxForCoborrower()
         {
-            {
-                IWebElement SpecialInterestCheckbox = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div[1]/app-liability/div/mat-card/div[4]/div[2]/div/mat-checkbox/label/span[1]")));
-                SpecialInterestCheckbox.Click();
-            }
-
+            IWebElement SpecialInterestCheckbox = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div[1]/app-liability/div/mat-card/div[4]/div[2]/div/mat-checkbox/label/span[1]")));
+            SpecialInterestCheckbox.Click();
         }
         [Then(@"Enter Special Interest Rate for CoBorrower")]
         public void ThenEnterSpecialInterestRateForCoborrower()
@@ -244,16 +238,16 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Enter Year for CoBorrower")]
         public void ThenEnterYearForCoborrower()
         {
-            IWebElement EnterYear = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div[1]/app-liability/div/mat-card/div[4]/div[5]/div[2]/div[1]/ng-select/div/div/div[2]/input")));
-            EnterYear.Click();
+            IWebElement EnterYearForCoborrower = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div[1]/app-liability/div/mat-card/div[4]/div[5]/div[2]/div[1]/ng-select/div/div/div[2]/input")));
+            EnterYearForCoborrower.Click();
             IWebElement Select = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[4]")));
             Select.Click();
         }
         [Then(@"Enter Make for CoBorrower")]
         public void ThenEnterMakeForCoborrower()
         {
-            IWebElement EnterYear = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div[1]/app-liability/div/mat-card/div[4]/div[5]/div[2]/div[2]/ng-select/div/div/div[2]/input")));
-            EnterYear.Click();
+            IWebElement EnterMakeForCoborrower = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div[1]/app-liability/div/mat-card/div[4]/div[5]/div[2]/div[2]/ng-select/div/div/div[2]/input")));
+            EnterMakeForCoborrower.Click();
 
             IWebElement Select = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[4]")));
             Select.Click();
@@ -261,31 +255,11 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Enter Model for CoBorrower")]
         public void ThenEnterModelForCoborrower()
         {
-            IWebElement EnterYear = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div[1]/app-liability/div/mat-card/div[4]/div[5]/div[2]/div[3]/ng-select/div/div/div[2]/input")));
-            EnterYear.Click();
-            _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(40);
+            IWebElement EnterModelForCoborrower = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div[1]/app-liability/div/mat-card/div[4]/div[5]/div[2]/div[3]/ng-select/div/div/div[2]/input")));
+            EnterModelForCoborrower.Click();
 
             IWebElement Select = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[3]")));
             Select.Click();
-            _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(40);
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }

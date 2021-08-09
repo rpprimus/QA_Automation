@@ -35,7 +35,7 @@ namespace Affordit_Automation.Tests.Steps
             wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(9000));
         }
 
-       
+
         [When(@"Click on Next Icon For Credit Records")]
         public void WhenClickOnNextForCreditRecords()
         {
@@ -50,13 +50,12 @@ namespace Affordit_Automation.Tests.Steps
             _loanTypePageObjects.EnterCreditScore2(_propertyReader[limit2]);
             _loanTypePageObjects.EnterCreditScore3(_propertyReader[limit3]);
         }
-        
+
         [Then(@"Click on Next Icon For Loan Type")]
         public void ThenClickOnNextIconForLoanType()
         {
             IWebElement NextIconForLoanType = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[1]/app-credit-record/div/div[2]/div/a[2]")));
             NextIconForLoanType.Click();
-            Thread.Sleep(2000);
         }
         [Then(@"Click MORTGAGE Icon")]
         public void ThenClickMORTGAGEIcon()
@@ -67,7 +66,7 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Select Type of Loan Request for MORTGAGE")]
         public void ThenSelectTypeOfLoanRequestForMORTGAGE()
         {
-           IWebElement LoanRequestForMORTGAGE = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[2]/app-loan-type/div/div[2]/form/div[2]/div[1]/ng-select/div/div/div[2]/input")));
+            IWebElement LoanRequestForMORTGAGE = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[2]/app-loan-type/div/div[2]/form/div[2]/div[1]/ng-select/div/div/div[2]/input")));
             LoanRequestForMORTGAGE.Click();
             IWebElement select = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[2]")));
             select.Click();
@@ -75,9 +74,9 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Enter Purchase Price for MORTGAGE")]
         public void ThenEnterPurchasePriceForMORTGAGE()
         {
-            IWebElement MORTGAGEIcon = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[2]/app-loan-type/div/div[2]/form/div[2]/div[2]/div[1]/div[1]/mat-form-field/div/div[1]/div/input")));
-            MORTGAGEIcon.Click();
-            MORTGAGEIcon.SendKeys("6000");
+            IWebElement PurchasePriceForMORTGAGE = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[2]/app-loan-type/div/div[2]/form/div[2]/div[2]/div[1]/div[1]/mat-form-field/div/div[1]/div/input")));
+            PurchasePriceForMORTGAGE.Click();
+            PurchasePriceForMORTGAGE.SendKeys("6000");
         }
 
         [Then(@"Enter Down Payment\(%\) for MORTGAGE")]
@@ -104,15 +103,15 @@ namespace Affordit_Automation.Tests.Steps
         public void ThenClickHOMEEQUITYIcon()
         {
             IWebElement HOMEEQUITYIcon = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[2]/app-loan-type/div/div[2]/form/div[1]/div/div/div[1]/div[2]/div[2]")));
-             HOMEEQUITYIcon.Click();  
+            HOMEEQUITYIcon.Click();
         }
         [Then(@"Select Type of Loan Request for HOME EQUITY")]
         public void ThenSelectTypeOfLoanRequestForHOMEEQUITY()
         {
-           
+
             IWebElement LoanRequestHOMEEQUITY = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[2]/app-loan-type/div/div[2]/form/div[2]/div[1]/ng-select/div/div/div[2]/input")));
             LoanRequestHOMEEQUITY.Click();
-            
+
             IWebElement select = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[2]")));
             select.Click();
         }
@@ -132,18 +131,17 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Select Type of Loan Request for PERSONAL")]
         public void ThenSelectTypeOfLoanRequestForPERSONAL()
         {
-            IWebElement LoanRequestForMORTGAGE = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[2]/app-loan-type/div/div[2]/form/div[2]/div[1]/ng-select/div/div/div[2]/input")));
-            LoanRequestForMORTGAGE.Click();
-            Thread.Sleep(2000);
+            IWebElement LoanRequestForPERSONAL = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[2]/app-loan-type/div/div[2]/form/div[2]/div[1]/ng-select/div/div/div[2]/input")));
+            LoanRequestForPERSONAL.Click();
             IWebElement select = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[4]")));
             select.Click();
         }
         [Then(@"Enter Loan Amount for PERSONAL")]
         public void ThenEnterLoanAmountForPERSONAL()
         {
-            IWebElement LoanAmountForHOMEEQUITY = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[2]/app-loan-type/div/div[2]/form/div[2]/div[2]/div[1]/div[1]/mat-form-field/div/div[1]/div/input")));
-            LoanAmountForHOMEEQUITY.Click();
-            LoanAmountForHOMEEQUITY.SendKeys("60000");
+            IWebElement LoanAmountForPERSONAL = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[2]/app-loan-type/div/div[2]/form/div[2]/div[2]/div[1]/div[1]/mat-form-field/div/div[1]/div/input")));
+            LoanAmountForPERSONAL.Click();
+            LoanAmountForPERSONAL.SendKeys("60000");
         }
         [Then(@"Click AUTO Icon")]
         public void ThenClickAUTOIcon()
@@ -154,18 +152,18 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Select Type of Loan Request for AUTO")]
         public void ThenSelectTypeOfLoanRequestForAUTO()
         {
-            IWebElement LoanRequestForMORTGAGE = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[2]/app-loan-type/div/div[2]/form/div[2]/div[1]/ng-select/div/div/div[2]/input")));
-            LoanRequestForMORTGAGE.Click();
-            
+            IWebElement LoanRequestForAUTO = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[2]/app-loan-type/div/div[2]/form/div[2]/div[1]/ng-select/div/div/div[2]/input")));
+            LoanRequestForAUTO.Click();
+
             IWebElement select = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[3]")));
             select.Click();
         }
         [Then(@"Enter Purchase Price for AUTO")]
         public void ThenEnterPurchasePriceForAUTO()
         {
-            IWebElement LoanAmountForHOMEEQUITY = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[2]/app-loan-type/div/div[2]/form/div[2]/div[2]/div[1]/div[1]/mat-form-field/div/div[1]/div/input")));
-            LoanAmountForHOMEEQUITY.Click();
-            LoanAmountForHOMEEQUITY.SendKeys("70000");
+            IWebElement PurchasePriceForAUTO = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[2]/app-loan-type/div/div[2]/form/div[2]/div[2]/div[1]/div[1]/mat-form-field/div/div[1]/div/input")));
+            PurchasePriceForAUTO.Click();
+            PurchasePriceForAUTO.SendKeys("70000");
         }
         [Then(@"Enter Down Payment\(%\) for AUTO")]
         public void ThenEnterDownPaymentForAUTO()
@@ -207,14 +205,14 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Click BOAT Icon")]
         public void ThenClickBOATIcon()
         {
-            IWebElement MoTORCYCLEIcon = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[2]/app-loan-type/div/div[2]/form/div[1]/div/div/div[1]/div[3]/div[3]")));
-            MoTORCYCLEIcon.Click();
+            IWebElement BOATIcon = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[2]/app-loan-type/div/div[2]/form/div[1]/div/div/div[1]/div[3]/div[3]")));
+            BOATIcon.Click();
         }
         [Then(@"Select Type of Loan Request for BOAT")]
         public void ThenSelectTypeOfLoanRequestForBOAT()
         {
-            IWebElement LoanRequestForMoTORCYCLE = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[2]/app-loan-type/div/div[2]/form/div[2]/div[1]/ng-select/div/div/div[2]/input")));
-            LoanRequestForMoTORCYCLE.Click();
+            IWebElement LoanRequestForBOAT = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[2]/app-loan-type/div/div[2]/form/div[2]/div[1]/ng-select/div/div/div[2]/input")));
+            LoanRequestForBOAT.Click();
 
             IWebElement select = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[3]")));
             select.Click();
@@ -222,18 +220,18 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Enter Purchase Price for BOAT")]
         public void ThenEnterPurchasePriceForBOAT()
         {
-            IWebElement DownPaymentForMoTORCYCLE = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[2]/app-loan-type/div/div[2]/form/div[2]/div[2]/div[1]/div[1]/mat-form-field/div/div[1]/div/input")));
-            DownPaymentForMoTORCYCLE.Click();
-            DownPaymentForMoTORCYCLE.SendKeys("60000");
+            IWebElement PurchasePriceForBOAT = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[2]/app-loan-type/div/div[2]/form/div[2]/div[2]/div[1]/div[1]/mat-form-field/div/div[1]/div/input")));
+            PurchasePriceForBOAT.Click();
+            PurchasePriceForBOAT.SendKeys("60000");
         }
         [Then(@"Enter Down Payment\(%\) for BOAT")]
         public void ThenEnterDownPaymentForBOAT()
         {
-            IWebElement DownPaymentForMoTORCYCLE = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[2]/app-loan-type/div/div[2]/form/div[2]/div[2]/div[1]/div[2]/mat-form-field/div/div[1]/div/input")));
-            DownPaymentForMoTORCYCLE.Click();
-            DownPaymentForMoTORCYCLE.SendKeys("3");
+            IWebElement DownPaymentForBOAT = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[2]/app-loan-type/div/div[2]/form/div[2]/div[2]/div[1]/div[2]/mat-form-field/div/div[1]/div/input")));
+            DownPaymentForBOAT.Click();
+            DownPaymentForBOAT.SendKeys("3");
         }
- 
+
         [Then(@"Click RV/ATV Icon")]
         public void ThenClickRVATVIcon()
         {

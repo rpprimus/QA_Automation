@@ -114,9 +114,7 @@ namespace Affordit_Automation.PageObjects
         public void RainyDayFund()
         {
             Click(RateofRetureB);
-          //  Thread.Sleep(2000);
             SendKeys(rainyday, "2000", true);
-           // Thread.Sleep(5000);
         }
         public void AnnualOvertime()
         {

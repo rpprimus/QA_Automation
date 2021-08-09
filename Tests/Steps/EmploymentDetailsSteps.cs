@@ -30,22 +30,21 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Click on Employment Button")]
         public void ThenClickOnEmploymentButton()
         {
-            Thread.Sleep(2000);
-            IWebElement personalInfo = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[1]/mat-step-header[4]/div[1]")));
-            act.MoveToElement(personalInfo).Click().Build().Perform();
-            
+            IWebElement EmploymentButton = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[1]/mat-step-header[4]/div[1]")));
+            act.MoveToElement(EmploymentButton).Click().Build().Perform();
+
         }
         [Then(@"Enter Employer Name")]
         public void ThenEnterEmployerName()
         {
-            IWebElement Empfirstname = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[4]/app-employment/div/div[2]/form/div[1]/div[1]/div[1]/mat-form-field/div/div[1]/div/input")));
-           
-            Empfirstname.SendKeys("ajay");
+            IWebElement EmployerName = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[4]/app-employment/div/div[2]/form/div[1]/div[1]/div[1]/mat-form-field/div/div[1]/div/input")));
+
+            EmployerName.SendKeys("ajay");
         }
         [Then(@"Enter Phone Number")]
         public void ThenEnterPhoneNumber()
         {
-            IWebElement Empphonenumber= wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[4]/app-employment/div/div[2]/form/div[1]/div[1]/div[2]/mat-form-field/div/div[1]/div/input")));
+            IWebElement Empphonenumber = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[4]/app-employment/div/div[2]/form/div[1]/div[1]/div[2]/mat-form-field/div/div[1]/div/input")));
             Empphonenumber.Click();
             Empphonenumber.SendKeys("9250240861");
         }
@@ -67,14 +66,14 @@ namespace Affordit_Automation.Tests.Steps
         {
             IWebElement AddressLineFirst = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[4]/app-employment/div/div[2]/form/div[2]/div/div[1]/mat-form-field/div/div[1]/div/input")));
             AddressLineFirst.Click();
-            AddressLineFirst.SendKeys("sector 63");
+            AddressLineFirst.SendKeys("2521 Palomar Airport Rd ");
         }
         [Then(@"Enter Address line Second")]
         public void ThenEnterAddressLineSecond()
         {
             IWebElement AddressLineSecond = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[4]/app-employment/div/div[2]/form/div[2]/div/div[2]/mat-form-field/div/div[1]/div/input")));
             AddressLineSecond.Click();
-            AddressLineSecond.SendKeys("sector 63");
+            AddressLineSecond.SendKeys("Ste 1050 Unit 7");
         }
         [Then(@"Click Next for CoBorrower Information")]
         public void ThenClickNextForCoborrowerInfo()
@@ -112,28 +111,24 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Enter CoBorrower Address line First")]
         public void ThenEnterCoborrowerAddressLineFirst()
         {
-            {
                 IWebElement CoborrowerAddressLineFirst = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[4]/app-employment/div/div[2]/form/div[4]/div/div[1]/mat-form-field/div/div[1]/div/input")));
                 CoborrowerAddressLineFirst.Click();
-                CoborrowerAddressLineFirst.SendKeys("noida");
-            }
+                CoborrowerAddressLineFirst.SendKeys("2267 S. El Camino Real");
         }
         [Then(@"Enter CoBorrower Address line Second")]
         public void ThenEnterCoborrowerAddressLineSecond()
         {
-            {
                 IWebElement CoborrowerAddressLineSecond = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[4]/app-employment/div/div[2]/form/div[4]/div/div[2]/mat-form-field/div/div[1]/div/input")));
                 CoborrowerAddressLineSecond.Click();
-                CoborrowerAddressLineSecond.SendKeys("uttar pradesh");
-            }
+                CoborrowerAddressLineSecond.SendKeys("Suite 100b Unit 5"); 
         }
 
         [Then(@"Click Next for Income and Asset Details")]
         public void ThenClickNextForIncomeAndAssetDetails()
         {
-            IWebElement CoborrowerMoreInfo = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[4]/app-employment/div/div[2]/div/a[2]/i")));
-            CoborrowerMoreInfo.Click();
-       
+            IWebElement IncomeAndAssetDetails = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[4]/app-employment/div/div[2]/div/a[2]/i")));
+            IncomeAndAssetDetails.Click();
+
         }
 
     }

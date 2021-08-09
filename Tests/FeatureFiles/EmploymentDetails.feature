@@ -25,7 +25,7 @@ Scenario: 1 Add Employment Details of Borrower and  CoBorrower (PRIM-198)
 	Then Enter CoBorrower Address line Second
 	Then Click Next for Income and Asset Details
 
-	Scenario: 2 Add Employment Details of Borrower (PRIM-199)
+Scenario: 2 Add Employment Details of Borrower (PRIM-199)
 	#Given Navigate to New Application Page with "CorrectUsername" and "CorrectPassword" 
 	#And Select "Meridian Test (MER)" tenent
 	And Click on New Application Button

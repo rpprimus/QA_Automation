@@ -43,23 +43,20 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Click on personal information")]
         public void ThenClickOnPersonalInformation()
         {
-            Thread.Sleep(2000);
             IWebElement personalInfo = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[1]/mat-step-header[3]")));
             act.MoveToElement(personalInfo).Click().Build().Perform();
-            
 
         }
         [Then(@"Enter Firstname of Borrower")]
         public void ThenEnterFirstnameOfBorrower()
         {
-           
+
             IWebElement Bofirstname = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[3]/app-personal-information/div/div[2]/form/div[1]/div[1]/div[1]/mat-form-field/div/div[1]/div/input")));
             Bofirstname.SendKeys("Alexandra");
         }
         [Then(@"Enter Last name of Borrower")]
         public void ThenEnterLastNameOfBorrower()
         {
-            _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(40);
             IWebElement Bolastname = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[3]/app-personal-information/div/div[2]/form/div[1]/div[1]/div[2]/mat-form-field/div/div[1]/div/input")));
             Bolastname.Click();
             Bolastname.SendKeys("Haynes");
@@ -67,8 +64,8 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Enter Borrower Date of Birth")]
         public void ThenEnterBorrowerDateOfBirth()
         {
-            IWebElement datet = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[3]/app-personal-information/div/div[2]/form/div[1]/div[1]/div[6]/mat-form-field/div/div[1]/div[1]/input")));
-            datet.Click();
+            IWebElement BorrowerDateOfBirth = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[3]/app-personal-information/div/div[2]/form/div[1]/div[1]/div[6]/mat-form-field/div/div[1]/div[1]/input")));
+            BorrowerDateOfBirth.Click();
             IWebElement Select = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/div[3]/div[2]/div/mat-datepicker-content/div[2]/mat-calendar/div/mat-month-view/table/tbody/tr[1]/td[2]/div[1]")));
             Select.Click();
         }
@@ -77,7 +74,7 @@ namespace Affordit_Automation.Tests.Steps
         public void ThenEnterSocial(String securitynumber)
         {
             _personal_info_Borr_CoBorrPageObject.EnterSecuritynumber(_propertyReader[securitynumber]);
-           
+
         }
         [Then(@"Click on Next icon for Borrower other information")]
         public void ThenClickOnNexticonForBorrowerOtherInformation()
@@ -90,21 +87,21 @@ namespace Affordit_Automation.Tests.Steps
         {
             IWebElement AddressLineOne = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[3]/app-personal-information/div/div[2]/form/div[2]/div[1]/div[1]/mat-form-field/div/div[1]/div/input")));
             AddressLineOne.Click();
-            AddressLineOne.SendKeys("173 Walnutwood Drive");
+            AddressLineOne.SendKeys("260-C North El Camino Real");
         }
         [Then(@"Enter Address line two")]
         public void ThenEnterAddressLineTwo()
         {
-            IWebElement AddressLineOne = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[3]/app-personal-information/div/div[2]/form/div[2]/div[1]/div[2]/mat-form-field/div/div[1]/div/input")));
-            AddressLineOne.Click();
-            AddressLineOne.SendKeys("Oxnard");
+            IWebElement AddressLineTwo = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[3]/app-personal-information/div/div[2]/form/div[2]/div[1]/div[2]/mat-form-field/div/div[1]/div/input")));
+            AddressLineTwo.Click();
+            AddressLineTwo.SendKeys("Suite G102 unit 98");
         }
         [Then(@"Enter City")]
         public void ThenEnterCity()
         {
-            IWebElement AddressLineOne = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[3]/app-personal-information/div/div[2]/form/div[2]/div[1]/div[3]/mat-form-field/div/div[1]/div/input")));
-            AddressLineOne.Click();
-            AddressLineOne.SendKeys("California");
+            IWebElement ThenEnterCity = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[3]/app-personal-information/div/div[2]/form/div[2]/div[1]/div[3]/mat-form-field/div/div[1]/div/input")));
+            ThenEnterCity.Click();
+            ThenEnterCity.SendKeys("San Marcos");
         }
 
         [Then(@"Select State")]
@@ -112,7 +109,7 @@ namespace Affordit_Automation.Tests.Steps
         {
             IWebElement SelectState = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[3]/app-personal-information/div/div[2]/form/div[2]/div[1]/div[4]/ng-select/div/div/div[2]/input")));
             SelectState.Click();
-            
+
             IWebElement Select = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[5]")));
             Select.Click();
         }
@@ -133,8 +130,8 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Click on Next link for Co-Borrower details")]
         public void ThenClickOnNextLinkForCo_BorrowerDetails()
         {
-            IWebElement ModalBlankCredit = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[3]/app-personal-information/div/div[2]/form/div[5]/a[2]/i")));
-            ModalBlankCredit.Click();
+            IWebElement Co_BorrowerDetails = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[3]/app-personal-information/div/div[2]/form/div[5]/a[2]/i")));
+            Co_BorrowerDetails.Click();
         }
         [Then(@"Enter Firstname of CoBorrower")]
         public void ThenEnterFirstnameOfCoBorrower()
@@ -146,15 +143,15 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Enter Last name of CoBorrower")]
         public void ThenEnterLastNameOfCoBorrower()
         {
-            IWebElement CoBolastname = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[3]/app-personal-information/div/div[2]/form/div[3]/div[1]/div[2]/mat-form-field/div/div[1]/div/input")));    
+            IWebElement CoBolastname = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[3]/app-personal-information/div/div[2]/form/div[3]/div[1]/div[2]/mat-form-field/div/div[1]/div/input")));
             CoBolastname.Click();
             CoBolastname.SendKeys("Kumar");
         }
         [Then(@"Enter CoBorrower Date of Birth")]
         public void ThenEnterCoBorrowerDateOfBirth()
         {
-            IWebElement datet = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[3]/app-personal-information/div/div[2]/form/div[3]/div[1]/div[6]/mat-form-field")));
-            datet.Click();
+            IWebElement CoBorrowerDateOfBirth = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[3]/app-personal-information/div/div[2]/form/div[3]/div[1]/div[6]/mat-form-field")));
+            CoBorrowerDateOfBirth.Click();
             IWebElement Select = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/div[3]/div[2]/div/mat-datepicker-content/div[2]/mat-calendar/div/mat-month-view/table/tbody/tr[1]/td[2]/div[1]")));
             Select.Click();
         }
@@ -163,45 +160,45 @@ namespace Affordit_Automation.Tests.Steps
         public void ThenEnterCoborrowerSocial(string secnumber2)
         {
             _personal_info_Borr_CoBorrPageObject.EnterCoSecuritynumber(_propertyReader[secnumber2]);
-            
+
         }
         [Then(@"Enter CoBorrower Address line one")]
         public void ThenEnterCoBorrowerrAddressLineOne()
         {
-            IWebElement AddressLineOne = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[3]/app-personal-information/div/div[2]/form/div[4]/div[1]/div[1]/mat-form-field/div/div[1]/div/input")));
-            AddressLineOne.Click();
-            AddressLineOne.SendKeys("175 Walnutwood Drive");
+            IWebElement CoBorrowerrAddressLineOne = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[3]/app-personal-information/div/div[2]/form/div[4]/div[1]/div[1]/mat-form-field/div/div[1]/div/input")));
+            CoBorrowerrAddressLineOne.Click();
+            CoBorrowerrAddressLineOne.SendKeys("2855 Stevens CreekBLVD");
         }
         [Then(@"Enter CoBorrower Address line two")]
         public void ThenEnterCoBorrowerAddressLineTwo()
         {
-            IWebElement AddressLineOne = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[3]/app-personal-information/div/div[2]/form/div[4]/div[1]/div[2]/mat-form-field/div/div[1]/div/input")));
-            AddressLineOne.Click();
-            AddressLineOne.SendKeys("Oxnard");
+            IWebElement CoBorrowerAddressLineTwo = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[3]/app-personal-information/div/div[2]/form/div[4]/div[1]/div[2]/mat-form-field/div/div[1]/div/input")));
+            CoBorrowerAddressLineTwo.Click();
+            CoBorrowerAddressLineTwo.SendKeys("Suite 2461 unit 10");
         }
         [Then(@"Enter CoBorrower City")]
         public void ThenEnterCoBorrowerCity()
         {
-            IWebElement AddressLineOne = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[3]/app-personal-information/div/div[2]/form/div[4]/div[1]/div[3]/mat-form-field/div/div[1]/div/input")));
-            AddressLineOne.Click();
-            AddressLineOne.SendKeys("California");
+            IWebElement CoBorrowerCity = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[3]/app-personal-information/div/div[2]/form/div[4]/div[1]/div[3]/mat-form-field/div/div[1]/div/input")));
+            CoBorrowerCity.Click();
+            CoBorrowerCity.SendKeys("Santa Clara");
         }
 
         [Then(@"Select CoBorrower State")]
-        public void ThenSelectCoBorrowerState()
+        public void ThenSelectCoBorrowertState()
         {
-            IWebElement SelectState = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[3]/app-personal-information/div/div[2]/form/div[4]/div[1]/div[4]/ng-select/div/div/div[2]/input")));
-            SelectState.Click();
-            
+            IWebElement CoBorrowertState = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[3]/app-personal-information/div/div[2]/form/div[4]/div[1]/div[4]/ng-select/div/div/div[2]/input")));
+            CoBorrowertState.Click();
+
             IWebElement Select = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[5]")));
             Select.Click();
         }
         [Then(@"Enter CoBorrower ZipCode")]
         public void ThenEnterCoborrowerZipCode()
         {
-            IWebElement ZipCode = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[3]/app-personal-information/div/div[2]/form/div[4]/div[1]/div[5]/mat-form-field/div/div[1]/div/input")));
-            ZipCode.Click();
-            ZipCode.SendKeys("93030");
+            IWebElement CoborrowerZipCode = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[3]/app-personal-information/div/div[2]/form/div[4]/div[1]/div[5]/mat-form-field/div/div[1]/div/input")));
+            CoborrowerZipCode.Click();
+            CoborrowerZipCode.SendKeys("93030");
         }
         [Then(@"Click on Next link for borrower more information")]
         public void ThenClickOnNextLinkForBorrowerMoreInformation()
@@ -218,8 +215,8 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Click on Next link for Borrower other information")]
         public void ThenClickOnNextLinkForBorrowerOtherInformation()
         {
-            IWebElement EmployerMoreInformation = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[3]/app-personal-information/div/div[2]/form/div[3]/a[2]")));
-            EmployerMoreInformation.Click();
+            IWebElement BorrowerOtherInformation = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[3]/app-personal-information/div/div[2]/form/div[3]/a[2]")));
+            BorrowerOtherInformation.Click();
         }
 
     }
