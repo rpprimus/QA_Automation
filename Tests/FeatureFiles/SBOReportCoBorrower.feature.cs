@@ -343,7 +343,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Then("Click on Next btn Link for Coborrwer Assets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 77
- testRunner.And("Clcik on Co Borrower Assets Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("Click on Co Borrower Assets Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 78
  testRunner.And("Click on Co borrower Assets  Types", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -448,7 +448,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Then("Enter Model for CoBorrower", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 112
- testRunner.Then("Clcik Next for SBO Report", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("Click Next for SBO Report", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

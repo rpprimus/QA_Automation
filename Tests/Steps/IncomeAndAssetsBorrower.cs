@@ -148,18 +148,14 @@ namespace Affordit_Automation.Tests.Steps
         }
         [Then(@"Enter Amount in Rainy Day Fund")]
         public void ThenEnterAmountInRainyDayFund()
-        {
+        {  
             _AL1PageObjects.RainyDayFund();
-            try
+            if(_AL1PageObjects.IsAnotherAssetsPanelAppear())
             {
                 IWebElement closebtnif = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[5]/app-financial-and-asset/div/div[2]/form/div[2]/div[1]/mat-card[2]/div[1]/a/i")));
                 closebtnif.Click();
             }
-            catch(Exception ex)
-            {
-                Console.WriteLine("Exception is " + ex);
-            }
-           
+                        
         }
         [Given(@"Click on Yes Button For CoBorrower")]
         public void GivenClickOnYesButtonForCoBorrower()
@@ -181,8 +177,8 @@ namespace Affordit_Automation.Tests.Steps
         {
             _AL1PageObjects.CoBorrowerAssets();
         }
-        [Then(@"Clcik on Co Borrower Assets Button")]
-        public void ThenClcikOnCoBorrowerAssetsButton()
+        [Then(@"Click on Co Borrower Assets Button")]
+        public void ThenClickOnCoBorrowerAssetsButton()
         {
             _AL1PageObjects.CoBoAssetsBtn();
         }

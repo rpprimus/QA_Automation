@@ -53,8 +53,8 @@ namespace PrimusFramework.StepDefination.LogForg
             _loginPageObjects.SelectTenent(tenent);
         }
 
-        [When(@"Clcik on Select Button")]
-        public void WhenClcikOnSelectButton()
+        [When(@"Click on Select Button")]
+        public void WhenClickOnSelectButton()
         {
             _loginPageObjects.ClickOnSelectButton();
         }

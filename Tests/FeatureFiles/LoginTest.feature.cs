@@ -299,7 +299,7 @@ this.FeatureBackground();
  testRunner.And("Select \"Meridian Test (MER)\" tenent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 29
- testRunner.When("Clcik on Select Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("Click on Select Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 30
  testRunner.Then("Redirect to Manage Your Applications Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

@@ -3,7 +3,7 @@ using OpenQA.Selenium;
 
 namespace Affordit_Automation.PageObjects
 {
-    public class SBOReoprtPageObjects : DriverHelper
+    public class SBOReportPageObjects : DriverHelper
     {
         public readonly PropertyReader _propertyReader = PropertyReader.Instance;
         public By NextbtnforLoantypepage => ByLocator("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[1]/app-credit-record/div/div[2]/div/a[2]");
@@ -57,7 +57,7 @@ namespace Affordit_Automation.PageObjects
         public By coaddresslinetwo => ByLocator("//input[@name='coBorrowerPresentAddressLine2']");
         public By coborrowerCity => ByLocator("//input[@name='coBorrowerPresentAddressCity']");
         public By cozipcode => ByLocator("//input[@name='coBorrowerPresentAddressZipCode']");
-        public SBOReoprtPageObjects(IWebDriver driver) : base(driver)
+        public SBOReportPageObjects(IWebDriver driver) : base(driver)
         { }
         public void nextbtnforloantype()
         {
@@ -265,5 +265,6 @@ namespace Affordit_Automation.PageObjects
         {
             Click(CoBoOtherInfo);
         }
+        
     }
 }

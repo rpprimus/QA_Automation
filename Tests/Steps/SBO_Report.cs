@@ -13,7 +13,7 @@ using TechTalk.SpecFlow;
 namespace Affordit_Automation.Tests.Steps
 {
     [Binding]
-    public sealed class SBO_Reoprt
+    public sealed class SBO_Report
     {
 
         Actions act;
@@ -21,15 +21,15 @@ namespace Affordit_Automation.Tests.Steps
         public readonly PropertyReader _propertyReader = null;
         public LoginPageObjects _loginPageObjects = null;
         public IncomeAndAssetsPrimaryPageObject _AL1PageObjects = null;
-        public SBOReoprtPageObjects _sbo = null;
+        public SBOReportPageObjects _sbo = null;
         WebDriverWait wait;
-        public SBO_Reoprt(IWebDriver driver)
+        public SBO_Report(IWebDriver driver)
         {
             _driver = driver;
             _propertyReader = PropertyReader.Instance;
             _loginPageObjects = new LoginPageObjects(_driver);
             _AL1PageObjects = new IncomeAndAssetsPrimaryPageObject(_driver);
-            _sbo = new SBOReoprtPageObjects(_driver);
+            _sbo = new SBOReportPageObjects(_driver);
             act = new Actions(_driver);
             wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(50));
         }
@@ -479,8 +479,8 @@ namespace Affordit_Automation.Tests.Steps
             nextbtnCoboAnnualIncome.Click();
         }
 
-        [Then(@"Clcik Next for SBO Report")]
-        public void ThenClcikNextForSBOReport()
+        [Then(@"Click Next for SBO Report")]
+        public void ThenClickNextForSBOReport()
         {
             _sbo.NextlinkforSBO();
         }

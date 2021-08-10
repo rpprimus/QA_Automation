@@ -303,7 +303,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Then("Enter Model", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 65
- testRunner.Then("Clcik Next for SBO Report", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("Click Next for SBO Report", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

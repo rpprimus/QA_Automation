@@ -74,7 +74,7 @@ Scenario:Scenario_01_Solution Based Outcome Report for Primary and Co Borrower
 	And Enter Amount in Annual Other Income Co Borrower
 	And Enter Description Co Borrower
 	Then Click on Next btn Link for Coborrwer Assets
-	And Clcik on Co Borrower Assets Button
+	And Click on Co Borrower Assets Button
 	And Click on Co borrower Assets  Types
 	And Select one Option From Dropdown "Money Market"
 	And Select Date From Date Picker
@@ -109,4 +109,4 @@ Scenario:Scenario_01_Solution Based Outcome Report for Primary and Co Borrower
 	Then Enter Year for CoBorrower
 	Then Enter Make for CoBorrower
 	Then Enter Model for CoBorrower
-	Then Clcik Next for SBO Report
+	Then Click Next for SBO Report

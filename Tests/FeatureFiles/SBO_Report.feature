@@ -62,4 +62,4 @@ Scenario:Scenario_01_Solution Based Outcome Report for Primary
 	Then Enter Year
 	Then Enter Make
 	Then Enter Model
-	Then Clcik Next for SBO Report
+	Then Click Next for SBO Report
