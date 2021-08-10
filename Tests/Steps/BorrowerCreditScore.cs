@@ -47,11 +47,7 @@ namespace Affordit_Automation.Tests.Steps
         [Given(@"Click on New Application Button")]
         public void GivenClickOnNewApplicationButton()
         {
-           // Thread.Sleep(7000);
              _BorrowerCreditScorePageObject.ClickOnAddApplicant();
-            //IWebElement NewAppBtn = _driver.FindElement(By.XPath("//button[text()=' Create New Application ']"));
-            //act.MoveToElement(NewAppBtn).Click().Build().Perform();
-          // Thread.Sleep(2000);
         }
         [When(@"Click on Next For Credit Records")]
         public void WhenClickOnNextForCreditRecords()
@@ -66,7 +62,6 @@ namespace Affordit_Automation.Tests.Steps
                 _BorrowerCreditScorePageObject.EnterCreditScore1(_propertyReader[limit1]);
                 _BorrowerCreditScorePageObject.EnterCreditScore2(_propertyReader[limit2]);
                 _BorrowerCreditScorePageObject.EnterCreditScore3(_propertyReader[limit3]);
-                // Thread.Sleep(10000);
         }
 
         [Then(@"Click on Page to see the Result")]

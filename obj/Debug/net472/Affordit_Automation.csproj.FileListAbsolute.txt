@@ -685,3 +685,4 @@ C:\Primus\Affordit_Automation\obj\Debug\net472\Affordit_Automation.csproj.CoreCo
 C:\Primus\Affordit_Automation\obj\Debug\net472\Affordit_Automation.csproj.CopyComplete
 C:\Primus\Affordit_Automation\obj\Debug\net472\Affordit_Automation.dll
 C:\Primus\Affordit_Automation\obj\Debug\net472\Affordit_Automation.pdb
+C:\Primus\Affordit_Automation\obj\Debug\net472\Affordit_Automation.csprojAssemblyReference.cache
