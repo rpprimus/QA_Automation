@@ -139,18 +139,26 @@ namespace Affordit_Automation.Tests.Steps
         public void ThenClickOnNextButtonToSeeTheResult()
         {
             _AL1PageObjects.NextForResult();
-            Thread.Sleep(5000);// to see the result on Net Cash Available, THis is option , You can change
-            //_AL1PageObjects.NetCashAvailable();
         }
         [Then(@"Click on Exclude Assets")]
         public void ThenClickOnExcludeAssets()
         {
             _AL1PageObjects.ExcludeAssets();
+
         }
         [Then(@"Enter Amount in Rainy Day Fund")]
         public void ThenEnterAmountInRainyDayFund()
         {
             _AL1PageObjects.RainyDayFund();
+            try
+            {
+                IWebElement closebtnif = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[5]/app-financial-and-asset/div/div[2]/form/div[2]/div[1]/mat-card[2]/div[1]/a/i")));
+                closebtnif.Click();
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("Exception is " + ex);
+            }
            
         }
         [Given(@"Click on Yes Button For CoBorrower")]

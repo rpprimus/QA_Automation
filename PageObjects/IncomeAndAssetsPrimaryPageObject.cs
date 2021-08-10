@@ -13,7 +13,7 @@ namespace Affordit_Automation.PageObjects
     {
         public string AnnualBaseIncome = "//input[@name='borrowerBaseIncome']";
         public By Annual => ByLocator("//input[@name='borrowerBaseIncome']");
-        public By AnnualC => ByLocator("(//*[@id='mat-input-47'])");
+        public By AnnualC => ByLocator("//input[@name='coBorrowerBaseIncome']");
         public By Monthly => ByLocator("(//*[@id='mat-input-35'])");
         public By CoMonthly => ByLocator("(//*[@id='mat-input-54'])");
         public By coborrower => ByLocator("(//*[@id='cdk-step-content-0-4']/app-financial-and-asset/div/div[2]/div/a[2])");
