@@ -31,14 +31,18 @@ namespace Affordit_Automation.PageObjects
         public By EmpAddress2 => ByLocator("//input[@name='borrowerCurrentEmployerAddressLine2']");
         public By nextbtnIncomeAssets => ByLocator("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[4]/app-employment/div/div[2]/div/a[2]/i");
         public By nextbtnLiabilites => ByLocator("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[5]/app-financial-and-asset/div/div[2]/div/a[2]/i");
-        public By LiabilityDropBtn => ByLocator("//ng-select[@data-placeholder='Liability']");
+        public By LiabilityDropBtn => ByLocator("(//ng-select[@data-placeholder='Liability'])[1]");
+        public By LiabilityDropBtn1 => ByLocator("(//ng-select[@data-placeholder='Liability'])[2]");
+        public By LiabilityDropBtn2 => ByLocator("(//ng-select[@data-placeholder='Liability'])[3]");
         public By liabilityBtn => ByLocator("//button[text()=' Add Liability ']");
-        public By LiabitityOption => ByLocator("//div//span[text()='Motorcycle']");
-        public By LiabityBalanceAmt => ByLocator("//input[@data-placeholder='Balance Amount']");
+        public By LiabitityOption => ByLocator("//div//span[text()='Automobile']");
+        public By LiabilityOptionCreditCard1 => ByLocator("(//div//span[text()='CreditCard'])[1]");
+        public By LiabilityOptionCreditCard2 => ByLocator("(//div//span[text()='CreditCard'])[2]");
+        public By LiabityBalanceAmt => ByLocator("(//input[@data-placeholder='Balance Amount'])[1]");
         public By dropdownIcon => ByLocator("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[3]/div[4]/div/a/i");
-        public By OrigalLoanAmt => ByLocator("//input[@data-placeholder='Original Loan Amount']");
-        public By Paymentamt => ByLocator("//input[@data-placeholder='Payment Amount']");
-        public By monthlyTerms => ByLocator("//input[@data-placeholder='Terms']");
+        public By OrigalLoanAmt => ByLocator("(//input[@data-placeholder='Original Loan Amount'])[1]");
+        public By Paymentamt => ByLocator("(//input[@data-placeholder='Payment Amount'])[1]");
+        public By monthlyTerms => ByLocator("(//input[@data-placeholder='Terms'])[1]");
         public By interestrate => ByLocator("(//input[@data-placeholder='Interest Rate'])[2]");
         public By specialinterest => ByLocator("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[4]/div[2]/div/mat-checkbox/label/span[1]");
         public By year => ByLocator("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[4]/div[5]/div[2]/div[1]/ng-select/div");
@@ -195,13 +199,29 @@ namespace Affordit_Automation.PageObjects
         {
             Click(LiabilityDropBtn);
         }
+        public void ClickOnLiblityDropdown1()
+        {
+            Click(LiabilityDropBtn1);
+        }
+        public void ClickOnLiblityDropdown2()
+        {
+            Click(LiabilityDropBtn2);
+        }
         public void SelectLiability()
         {
             Click(LiabitityOption);
         }
+        public void SelectLiabilityCreditCard1()
+        {
+            Click(LiabilityOptionCreditCard1);
+        }
+        public void SelectLiabilityCreditCard2()
+        {
+            Click(LiabilityOptionCreditCard2);
+        }
         public void EnterBalanceAmtforLiability()
         {
-            SendKeys(LiabityBalanceAmt, "2000", true);
+            SendKeys(LiabityBalanceAmt, "16814", true);
         }
         public void ClickOnDropdownIcon()
         {
@@ -209,19 +229,19 @@ namespace Affordit_Automation.PageObjects
         }
         public void EnterOrignalLoanAmount()
         {
-            SendKeys(OrigalLoanAmt, "5000", true);
+            SendKeys(OrigalLoanAmt, "24278", true);
         }
         public void EnterPaymentAmount()
         {
-            SendKeys(Paymentamt, "200", true);
+            SendKeys(Paymentamt, "578", true);
         }
         public void EnterTermLiability()
         {
-            SendKeys(monthlyTerms, "3", true);
+            SendKeys(monthlyTerms, "36", true);
         }
         public void EnterInterestRate()
         {
-            SendKeys(interestrate, "3.5", true);
+            SendKeys(interestrate, "2", true);
         }
         public void SpecialInterestRate()
         {
@@ -255,7 +275,7 @@ namespace Affordit_Automation.PageObjects
         }
         public void PersonalLoanAmount()
         {
-            SendKeys(PersoalLoan, "75000", true);
+            SendKeys(PersoalLoan, "2000", true);
         }
         public void NextbtnlinkCoborrowerPersonal()
         {
@@ -264,7 +284,6 @@ namespace Affordit_Automation.PageObjects
         public void nextbtnlinkCoboOtherInfo()
         {
             Click(CoBoOtherInfo);
-        }
-        
+        }     
     }
 }

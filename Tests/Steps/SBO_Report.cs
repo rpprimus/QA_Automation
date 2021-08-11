@@ -31,7 +31,7 @@ namespace Affordit_Automation.Tests.Steps
             _AL1PageObjects = new IncomeAndAssetsPrimaryPageObject(_driver);
             _sbo = new SBOReportPageObjects(_driver);
             act = new Actions(_driver);
-            wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(50));
+            wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(100));
         }
         [Then(@"Click on Next Icon For Loan Type")]
         public void ThenClickOnNextIconForLoanType()
@@ -75,7 +75,7 @@ namespace Affordit_Automation.Tests.Steps
         {
             IWebElement LoanRequestForPersonal = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[2]/app-loan-type/div/div[2]/form/div[2]/div[1]/ng-select/div")));
             LoanRequestForPersonal.Click();
-            IWebElement selectFromLoanType = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[4]")));
+            IWebElement selectFromLoanType = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[1]")));
             selectFromLoanType.Click();
         }
         [Then(@"Enter Loan Amount for PERSONAL")]
@@ -137,7 +137,7 @@ namespace Affordit_Automation.Tests.Steps
         {
             IWebElement ClickOnState = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[3]/app-personal-information/div/div[2]/form/div[2]/div[1]/div[4]/ng-select/div/div/div[2]/input")));
             ClickOnState.Click();
-            IWebElement SelectStatefromDropdown = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[5]")));
+            IWebElement SelectStatefromDropdown = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[3]")));
             SelectStatefromDropdown.Click();
         }
 
@@ -166,6 +166,23 @@ namespace Affordit_Automation.Tests.Steps
         {
             _sbo.EmployeerTitle();
         }
+        [Then(@"Enter Years on this Job")]
+        public void ThenEnterYearsOnThisJob()
+        {
+            IWebElement YearsOnThisJob = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[4]/app-employment/div/div[2]/form/div[1]/div[1]/div[5]/mat-form-field/div/div[1]/div/input")));
+            YearsOnThisJob.SendKeys("5");
+        }
+        [When(@"Click on Next Link for Assets Page")]
+        public void WhenClickOnNextLinkForAssetsPage()
+        {
+            _AL1PageObjects.LinkForAssetsPage();
+        }
+        [When(@"Click on Next Button to See the Result")]
+        public void WhenClickOnNextButtonToSeeTheResult()
+        {
+            _AL1PageObjects.NextForResult();
+        }
+
         [Then(@"Click Next for Borrower More Information")]
         public void ThenClickNextForBorrowerMoreInformation()
         {
@@ -181,6 +198,117 @@ namespace Affordit_Automation.Tests.Steps
         {
             _sbo.EnterEmployeerAddress1();
         }
+        [When(@"Click on Next Link for Liabilites Page")]
+        public void WhenClickOnNextLinkForLiabilitesPage()
+        {
+            _sbo.ClickOnNextbtnForLiabilites();
+        }
+        [Then(@"Enter Creditor Name")]
+        public void ThenEnterCreditorName()
+        {
+            IWebElement creditorname1 = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("(//input[@data-placeholder='Creditor Name'])[1]")));
+            creditorname1.SendKeys("TOYOTA MOTOR CREDIT");
+        }
+        [Then(@"Enter Creditor Name Credit Card")]
+        public void ThenEnterCreditorNameCreditCard()
+        {
+            IWebElement creditorname1 = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("(//input[@data-placeholder='Creditor Name'])[2]")));
+            creditorname1.SendKeys("City Bank");
+        }
+        [Then(@"Enter Creditor Name Credit Card second")]
+        public void ThenEnterCreditorNameCreditCardSecond()
+        {
+            IWebElement creditorname1 = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("(//input[@data-placeholder='Creditor Name'])[3]")));
+            creditorname1.SendKeys("Yes Bank");
+        }
+
+        [Then(@"Enter Date Opened")]
+        public void ThenEnterDateOpened()
+        {
+            IWebElement OpenedDate1 = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("(//input[@data-placeholder='Date Opened'])[1]")));
+            OpenedDate1.Click();
+            OpenedDate1.SendKeys("6/12/2018");
+        }
+        [Then(@"Enter Date Opened Credit Card")]
+        public void ThenEnterDateOpenedCreditCard()
+        {
+            IWebElement OpenedDate2 = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("(//input[@data-placeholder='Date Opened'])[2]")));
+            OpenedDate2.Click();
+            OpenedDate2.SendKeys("6/10/2015");
+        }
+        [Then(@"Enter Date Opened Credit Card second")]
+        public void ThenEnterDateOpenedCreditCardSecond()
+        {
+            IWebElement OpenedDate3= wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("(//input[@data-placeholder='Date Opened'])[3]")));
+            OpenedDate3.Click();
+            OpenedDate3.SendKeys("12/6/2013");
+        }
+
+        [Then(@"Enter Balance Amount Credit Card")]
+        public void ThenEnterBalanceAmountCreditCard()
+        {
+            IWebElement BalanceAmtCredit1 = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("(//input[@data-placeholder='Balance Amount'])[2]")));
+            BalanceAmtCredit1.SendKeys("3508");
+        }
+        [Then(@"Enter Balance Amount Credit Card second")]
+        public void ThenEnterBalanceAmountCreditCardSecond()
+        {
+            IWebElement BalanceAmtCredit2 = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("(//input[@data-placeholder='Balance Amount'])[3]")));
+            BalanceAmtCredit2.SendKeys("3045");
+        }
+
+        [Then(@"Enter Account Number Credit Card")]
+        public void ThenEnterAccountNumberCreditCard()
+        {
+            IWebElement AccountNo = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("(//input[@data-placeholder='Account Number'])[2]")));
+            AccountNo.SendKeys("345678967");
+        }
+        [Then(@"Enter Account Number Credit Card second")]
+        public void ThenEnterAccountNumberCreditCardSecond()
+        {
+            IWebElement AccountNo1 = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("(//input[@data-placeholder='Account Number'])[3]")));
+            AccountNo1.SendKeys("345678447");
+        }
+
+        [Then(@"Enter Credit Limit first")]
+        public void ThenEnterCreditLimitFirst()
+        {
+            IWebElement termscc1 = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("(//input[@data-placeholder='Credit Limit'])[1]")));
+            termscc1.SendKeys("0");
+        }
+        [Then(@"Enter Credit Limit second")]
+        public void ThenEnterCreditLimitSecond()
+        {
+            IWebElement termscc2 = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("(//input[@data-placeholder='Credit Limit'])[2]")));
+            termscc2.SendKeys("0");
+        }
+
+        [Then(@"Enter Months Reviewed Credit Card")]
+        public void ThenEnterMonthsReviewedCreditCard()
+        {
+            IWebElement monthreviewedcc1 = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("(//input[@data-placeholder='Months Reviewed'])[2]")));
+            monthreviewedcc1.SendKeys("99");
+        }
+        [Then(@"Enter Months Reviewed Credit Card second")]
+        public void ThenEnterMonthsReviewedCreditCardSecond()
+        {
+            IWebElement monthreviewedcc2 = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("(//input[@data-placeholder='Months Reviewed'])[3]")));
+            monthreviewedcc2.SendKeys("99");
+        }
+
+        [Then(@"Click on Payment Amount Credit Card")]
+        public void ThenClickOnPaymentAmountCreditCard()
+        {
+            IWebElement paymentamountcc1 = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("(//input[@data-placeholder='Payment Amount'])[2]")));
+            paymentamountcc1.SendKeys("78");
+        }
+        [Then(@"Click on Payment Amount Credit Card second")]
+        public void ThenClickOnPaymentAmountCreditCardSecond()
+        {
+            IWebElement paymentamountcc2 = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("(//input[@data-placeholder='Payment Amount'])[3]")));
+            paymentamountcc2.SendKeys("65");
+        }
+
         [When(@"Click Next for Income and Asset Details")]
         public void WhenClickNextForIncomeAndAssetDetails()
         {
@@ -201,16 +329,46 @@ namespace Affordit_Automation.Tests.Steps
         {
             _sbo.ClickOnLiblityDropdown();
         }
+
+        [Then(@"Click on Liabilities Option for first Credit Card")]
+        public void ThenClickOnLiabilitiesOptionForFirstCreditCard()
+        {
+            _sbo.ClickOnLiblityDropdown1();
+        }
+        [Then(@"Click on Liabilities Option for Second Credit Card")]
+        public void ThenClickOnLiabilitiesOptionForSecondCreditCard()
+        {
+            _sbo.ClickOnLiblityDropdown2();
+        }
+
         [Then(@"Select Liability from Dropdown")]
         public void ThenSelectLiabilityFromDropdown()
         {
             _sbo.SelectLiability();
         }
+        [Then(@"Select Liability from Dropdown Credit Card")]
+        public void ThenSelectLiabilityFromDropdownCreditCard()
+        {
+            _sbo.SelectLiabilityCreditCard1();
+        }
+        [Then(@"Select Liability from Dropdown Credit Card second")]
+        public void ThenSelectLiabilityFromDropdownCreditCardSecond()
+        {
+            _sbo.SelectLiabilityCreditCard2();
+        }
+
         [Then(@"Enter Balance Amount")]
         public void ThenEnterBalanceAmount()
         {
             _sbo.EnterBalanceAmtforLiability();
         }
+        [Then(@"Enter Account Number")]
+        public void ThenEnterAccountNumber()
+        {
+            IWebElement AccNo1 = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("(//input[@data-placeholder='Account Number'])[1]")));
+            AccNo1.SendKeys("70401260748384443");
+        }
+
         [Then(@"Click the Dropdown Icon")]
         public void ThenClickTheDropdownIcon()
         {
@@ -250,9 +408,9 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Enter Year")]
         public void ThenEnterYear()
         {
-            IWebElement ClickonYear = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[4]/div[5]/div[2]/div[1]/ng-select/div/div/div[2]/input")));
+            IWebElement ClickonYear = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[4]/div[5]/div[2]/div[1]/ng-select/div")));
             ClickonYear.Click();
-            IWebElement SelectYear = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[5]")));
+            IWebElement SelectYear = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[4]")));
             SelectYear.Click();
         }
         [Then(@"Enter Make")]
@@ -260,17 +418,26 @@ namespace Affordit_Automation.Tests.Steps
         {
             IWebElement ClickOnMake = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[4]/div[5]/div[2]/div[2]/ng-select/div/div/div[2]/input")));
             ClickOnMake.Click();
-            IWebElement SelectMake = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[4]")));
+            IWebElement SelectMake = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[26]")));
             SelectMake.Click();
         }
         [Then(@"Enter Model")]
         public void ThenEnterModel()
         {
-            IWebElement ClickOnModel = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[4]/div[5]/div[2]/div[3]/ng-select/div")));
+            IWebElement ClickOnModel = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[4]/div[5]/div[2]/div[3]/ng-select/div/span")));
             ClickOnModel.Click();
             IWebElement SelectModal = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[3]")));
             SelectModal.Click();
         }
+        [Then(@"Select Body")]
+        public void ThenSelectBody()
+        {
+            IWebElement ClickOnBody = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[4]/div[5]/div[2]/div[4]/ng-select/div")));
+            ClickOnBody.Click();
+            IWebElement SelectBody = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[5]")));
+            SelectBody.Click();
+        }
+
         [Then(@"Click on Next link for Co Borrower details")]
         public void ThenClickOnNextLinkForCoBorrowerDetails()
         {
@@ -358,11 +525,19 @@ namespace Affordit_Automation.Tests.Steps
             IWebElement DropdownIconForCoborrower = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div[1]/app-liability/div/mat-card/div[3]/div[4]/div/a")));
             DropdownIconForCoborrower.Click();
         }
-        [Then(@"Click on Original Loan Amount for CoBorrower")]
-        public void ThenClickOnOriginalLoanAmountForCoBorrower()
+        [Then(@"Check on Has Special Interest Rate")]
+        public void ThenCheckOnHasSpecialInterestRate()
         {
             IWebElement SpecialInterestCheckbox = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div[1]/app-liability/div/mat-card/div[4]/div[2]/div/mat-checkbox/label/span[1]")));
             SpecialInterestCheckbox.Click();
+        }
+
+        [Then(@"Click on Original Loan Amount for CoBorrower")]
+        public void ThenClickOnOriginalLoanAmountForCoBorrower()
+        {
+            IWebElement OrignalLoanAmount = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div[1]/app-liability/div/mat-card/div[4]/div[1]/div[2]/mat-form-field/div/div[1]/div/input")));
+            OrignalLoanAmount.SendKeys("10000");
+
         }
         [Then(@"Click on Payment Amount for CoBorrower")]
         public void ThenClickOnPaymentAmountForCoBorrower()
@@ -382,6 +557,13 @@ namespace Affordit_Automation.Tests.Steps
             IWebElement RateForCoborrower = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div[1]/app-liability/div/mat-card/div[4]/div[1]/div[4]/mat-form-field/div/div[1]/div/input")));
             RateForCoborrower.SendKeys("3");
         }
+        [Then(@"Enter Special Interest Rate For Co Borrower")]
+        public void ThenEnterSpecialInterestRateForCoBorrower()
+        {
+            IWebElement SpecialInterestRate = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div[1]/app-liability/div/mat-card/div[4]/div[2]/div[2]/mat-form-field/div/div[1]/div/input")));
+            SpecialInterestRate.SendKeys("3");
+        }
+
         [Then(@"Enter Year for CoBorrower")]
         public void ThenEnterYearForCoBorrower()
         {
@@ -478,11 +660,30 @@ namespace Affordit_Automation.Tests.Steps
             IWebElement nextbtnCoboAnnualIncome = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[5]/app-financial-and-asset/div/div[2]/div/a[2]/i")));
             nextbtnCoboAnnualIncome.Click();
         }
+        [Then(@"Enter Months Reviewed")]
+        public void ThenEnterMonthsReviewed()
+        {
+            IWebElement MonthReviewed = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("(//input[@data-placeholder='Months Reviewed'])[1]")));
+            MonthReviewed.SendKeys("26");
+        }
+        [Then(@"Click the Dropdown Icon For first Credit Card")]
+        public void ThenClickTheDropdownIconForFirstCreditCard()
+        {
+            IWebElement dropdown2 = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[2]/app-liability/div/mat-card/div[3]/div[4]/div/a/i")));
+            dropdown2.Click();
+        }
+        [Then(@"Click the Dropdown Icon Second Credit Card")]
+        public void ThenClickTheDropdownIconSecondCreditCard()
+        {
+            IWebElement dropdown3 = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[3]/app-liability/div/mat-card/div[3]/div[4]/div/a/i")));
+            dropdown3.Click();
+        }
 
         [Then(@"Click Next for SBO Report")]
         public void ThenClickNextForSBOReport()
         {
             _sbo.NextlinkforSBO();
+            Thread.Sleep(10000);
         }
     }
 }

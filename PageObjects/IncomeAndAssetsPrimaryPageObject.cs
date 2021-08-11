@@ -122,24 +122,24 @@ namespace Affordit_Automation.PageObjects
         public void RainyDayFund()
         {
             Click(RateofRetureB);
-            SendKeys(rainyday, "2000", true);
+            SendKeys(rainyday, "20", true);
             
         }
         public void AnnualOvertime()
         {
-            SendKeys(annualovertime, "5000", true);
+            SendKeys(annualovertime, "0", true);
         }
         public void AnnualBonuses()
         {
-            SendKeys(annualbonus, "10000", true);
+            SendKeys(annualbonus, "0", true);
         }
         public void AnnualCommision()
         {
-            SendKeys(Acomm,"1000",true);
+            SendKeys(Acomm,"0",true);
         }
         public void AnnualOtherIncome()
         {
-            SendKeys(AOI, "10000", true);
+            SendKeys(AOI, "0", true);
         }
         public void Description()
         {
