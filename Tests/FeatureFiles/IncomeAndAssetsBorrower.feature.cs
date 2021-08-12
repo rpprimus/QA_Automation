@@ -328,7 +328,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Then("Click on Next btn Link for Coborrwer Assets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 56
- testRunner.And("Clcik on Co Borrower Assets Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("Click on Co Borrower Assets Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 57
  testRunner.And("Click on Co borrower Assets  Types", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -468,7 +468,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Then("Click on Next btn Link for Coborrwer Assets", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 95
- testRunner.And("Clcik on Co Borrower Assets Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("Click on Co Borrower Assets Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 96
  testRunner.And("Click on Co borrower Assets  Types", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

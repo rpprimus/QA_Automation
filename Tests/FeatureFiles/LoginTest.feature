@@ -26,5 +26,5 @@ Scenario: Scenario_04_Check the Account Details of a user with valid user PRIM-1
 	And Enter "CorrectUsername" and "CorrectPassword" for Login
 	When User click on login Button
 	And Select "Meridian Test (MER)" tenent
-	When Clcik on Select Button
+	When Click on Select Button
 	Then Redirect to Manage Your Applications Page

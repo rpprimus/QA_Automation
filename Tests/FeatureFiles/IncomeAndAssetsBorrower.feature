@@ -53,7 +53,7 @@ Scenario: Scenario_03_Entering Annual Base Income of Primary and Co Borrower and
 	And Click on next Button link for Coborrower
 	And Enter Amount in "AnnualBaseIncomeCo" Coborrower
 	Then Click on Next btn Link for Coborrwer Assets
-	And Clcik on Co Borrower Assets Button
+	And Click on Co Borrower Assets Button
 	And Click on Co borrower Assets  Types
 	And Select one Option From Dropdown "Money Market"
 	And Select Date From Date Picker
@@ -92,7 +92,7 @@ Scenario: Scenario_04_Entering Annual Base Income of Primary and Co Borrower and
 	And Enter Amount in Annual Other Income Co Borrower
 	And Enter Description Co Borrower
 	Then Click on Next btn Link for Coborrwer Assets
-	And Clcik on Co Borrower Assets Button
+	And Click on Co Borrower Assets Button
 	And Click on Co borrower Assets  Types
 	And Select one Option From Dropdown "Money Market"
 	And Select Date From Date Picker
