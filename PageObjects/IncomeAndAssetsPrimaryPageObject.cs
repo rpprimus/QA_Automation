@@ -13,7 +13,7 @@ namespace Affordit_Automation.PageObjects
     {
         public string AnnualBaseIncome = "//input[@name='borrowerBaseIncome']";
         public By Annual => ByLocator("//input[@name='borrowerBaseIncome']");
-        public By AnnualC => ByLocator("//input[@name='coBorrowerBaseIncome']");
+        public By AnnualC => ByLocator("(//*[@id='mat-input-47'])");
         public By Monthly => ByLocator("(//*[@id='mat-input-35'])");
         public By CoMonthly => ByLocator("(//*[@id='mat-input-54'])");
         public By coborrower => ByLocator("(//*[@id='cdk-step-content-0-4']/app-financial-and-asset/div/div[2]/div/a[2])");
@@ -54,15 +54,7 @@ namespace Affordit_Automation.PageObjects
         {
             return ByLocator($"//div//span[contains(text(),'{assettype}')]");
         }
-        public By GetErrorXpath()
-        {
-            return ByLocator($"/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[5]/app-financial-and-asset/div/div[2]/form/div[2]/div[1]/mat-card[2]/div[1]/a/i");
-        }
-        public bool IsAnotherAssetsPanelAppear()
-        {
-            WaitForElementDisplay(GetErrorXpath(), 20);
-            return IsElementDisplayed(GetErrorXpath());
-        }
+        
         public void EnterAnnualBaseIncome(string ABIncome)
         {
             SendKeys(Annual, ABIncome, true);
@@ -122,24 +114,23 @@ namespace Affordit_Automation.PageObjects
         public void RainyDayFund()
         {
             Click(RateofRetureB);
-            SendKeys(rainyday, "20", true);
-            
+            SendKeys(rainyday, "2000", true);
         }
         public void AnnualOvertime()
         {
-            SendKeys(annualovertime, "0", true);
+            SendKeys(annualovertime, "5000", true);
         }
         public void AnnualBonuses()
         {
-            SendKeys(annualbonus, "0", true);
+            SendKeys(annualbonus, "10000", true);
         }
         public void AnnualCommision()
         {
-            SendKeys(Acomm,"0",true);
+            SendKeys(Acomm,"1000",true);
         }
         public void AnnualOtherIncome()
         {
-            SendKeys(AOI, "0", true);
+            SendKeys(AOI, "10000", true);
         }
         public void Description()
         {

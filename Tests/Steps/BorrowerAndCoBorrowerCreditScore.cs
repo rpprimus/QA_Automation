@@ -27,9 +27,7 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Click on Yes Button")]
         public void ThenClickOnYesButton()
         {
-            //Thread.Sleep(2000);
             _CoBorrowerPageObject.ClickonYesBtn();
-            //Thread.Sleep(1000);
         }
         [Then(@"Click on Next For Credit Records")]
         public void ThenClickOnNextForCreditRecords()

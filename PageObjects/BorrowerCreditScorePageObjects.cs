@@ -65,7 +65,6 @@ namespace Affordit_Automation.PageObjects
 		}
 		public void ClickForCreditScore()
 		{
-			//Thread.Sleep(2000);
 			Click(NextBtnForCS);
 		}
 		public void ClickOnModal()
