@@ -150,11 +150,11 @@ namespace Affordit_Automation.Tests.Steps
         public void ThenEnterAmountInRainyDayFund()
         {  
             _AL1PageObjects.RainyDayFund();
-            if(_AL1PageObjects.IsAnotherAssetsPanelAppear())
-            {
-                IWebElement closebtnif = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[5]/app-financial-and-asset/div/div[2]/form/div[2]/div[1]/mat-card[2]/div[1]/a/i")));
-                closebtnif.Click();
-            }
+            //if(_AL1PageObjects.IsAnotherAssetsPanelAppear())
+            //{
+            //    IWebElement closebtnif = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[5]/app-financial-and-asset/div/div[2]/form/div[2]/div[1]/mat-card[2]/div[1]/a/i")));
+            //    closebtnif.Click();
+            //}
                         
         }
         [Given(@"Click on Yes Button For CoBorrower")]
