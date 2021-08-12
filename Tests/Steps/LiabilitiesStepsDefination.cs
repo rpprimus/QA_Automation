@@ -72,68 +72,6 @@ namespace Affordit_Automation.Tests.Steps
             BalanceAmount.SendKeys("2000");
 
         }
-        [Then(@"Click the Dropdown Icon")]
-        public void ThenClickTheDropdownIcon()
-        {
-            IWebElement DropdownIcon = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[3]/div[4]/div/a/i")));
-            DropdownIcon.Click();
-        }
-
-        [Then(@"Click on Original Loan Amount")]
-        public void ThenClickOnOriginalLoanAmount()
-        {
-            IWebElement OriginalLoanAmount = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[4]/div[1]/div[2]/mat-form-field/div/div[1]/div/input")));
-            OriginalLoanAmount.Click();
-            OriginalLoanAmount.SendKeys("5000");
-        }
-        [Then(@"Click on Payment Amount")]
-        public void ThenClickOnPaymentAmount()
-        {
-            IWebElement PaymentAmount = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[4]/div[1]/div[6]/mat-form-field/div/div[1]/div/input")));
-            PaymentAmount.Click();
-            PaymentAmount.SendKeys("3000");
-        }
-        [Then(@"Enter Terms")]
-        public void ThenEnterTerms()
-        {
-            IWebElement EnterTerms = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[4]/div[1]/div[3]/mat-form-field/div/div[1]/div/input")));
-            EnterTerms.Click();
-            EnterTerms.SendKeys("5");
-        }
-        [Then(@"Enter Interest Rate")]
-        public void ThenEnterInterestRate()
-        {
-            IWebElement InterestRate = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[4]/div[1]/div[4]/mat-form-field/div/div[1]/div/input")));
-            InterestRate.Click();
-            InterestRate.SendKeys("4");
-        }
-        [Then(@"Enter Year")]
-        public void ThenEnterYear()
-        {
-            IWebElement EnterYear = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[4]/div[5]/div[2]/div[1]/ng-select/div/div/div[2]/input"))); EnterYear.Click();
-            EnterYear.Click();
-
-            IWebElement Select = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[5]")));
-            Select.Click();
-        }
-        [Then(@"Enter Make")]
-        public void ThenEnterMake()
-        {
-            IWebElement EnterMake = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[4]/div[5]/div[2]/div[2]/ng-select/div/div/div[2]/input")));
-            EnterMake.Click();
-
-            IWebElement Select = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[4]")));
-            Select.Click();
-        }
-        [Then(@"Enter Model")]
-        public void ThenEnterModel()
-        {
-            IWebElement EnterModel = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[4]/div[5]/div[2]/div[3]/ng-select/div/div/div[2]/input")));
-            EnterModel.Click();
-
-            IWebElement Select = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[3]")));
-            Select.Click();
-        }
         [Then(@"Check the Special Interest Checkbox")]
         public void ThenCheckTheSpecialInterestCheckbox()
         {

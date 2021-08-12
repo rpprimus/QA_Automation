@@ -153,7 +153,7 @@ namespace Affordit_Automation.Utils
 		}
 
 		//Verify element is visible or not
-		public bool IsElementDisplayed(By locator, int timeout = 3)
+		public bool IsElementDisplayed(By locator, int timeout = 10)
 		{
 			return FindElement(locator, SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible, timeout, false) != null;
 		}

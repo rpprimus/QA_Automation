@@ -48,13 +48,22 @@ namespace Affordit_Automation.PageObjects
         public By annuarentco => ByLocator("//input[@name='coBorrowerNetRentalIncome']");
         public By annotherincco => ByLocator("//input[@name='coBorrowerOtherIncome']");
         public By DescCobo => ByLocator("//input[@name='coBorrowerDescribeOtherIncome']");
+        public By anotherAssetsbtn => ByLocator("/html/body/modal-container[2]/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[5]/app-financial-and-asset/div/div[2]/form/div[2]/div[1]/mat-card[2]/div[1]/a/i");
         public IncomeAndAssetsPrimaryPageObject(IWebDriver driver) : base(driver)
         { }
         public By AssetsXpath(string assettype)
         {
             return ByLocator($"//div//span[contains(text(),'{assettype}')]");
         }
-        
+        public By GetErrorXpath()
+        {
+            return ByLocator("/html/body/modal-container[2]/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[5]/app-financial-and-asset/div/div[2]/form/div[2]/div[1]/mat-card[2]/div[1]/a/is");
+        }
+        public bool IsAnotherAssetsPanelAppear()
+        {
+            WaitForElementDisplay(GetErrorXpath(), 20);
+            return IsElementDisplayed(GetErrorXpath());
+        }
         public void EnterAnnualBaseIncome(string ABIncome)
         {
             SendKeys(Annual, ABIncome, true);
@@ -112,9 +121,11 @@ namespace Affordit_Automation.PageObjects
             Click(excludeassets);
         }
         public void RainyDayFund()
-        {
+        {       
             Click(RateofRetureB);
+            Click(rainyday);
             SendKeys(rainyday, "2000", true);
+            
         }
         public void AnnualOvertime()
         {
@@ -168,7 +179,9 @@ namespace Affordit_Automation.PageObjects
         public void RainyDayFundCoBo()
         {
             Click(ROR);
+            Thread.Sleep(2000);
             SendKeys(rainydaycobo, "1500", true);
+            Click(ROR);
         }
         public void AnnualOvertimeCo()
         {

@@ -394,16 +394,16 @@ namespace Affordit_Automation.Tests.Steps
         {
             _sbo.EnterInterestRate();
         }
-        [Then(@"Check the Special Interest Checkbox")]
-        public void ThenCheckTheSpecialInterestCheckbox()
-        {
-            _sbo.SpecialInterestRate();
-        }
-        [Then(@"Enter Special Interest Rate")]
-        public void ThenEnterSpecialInterestRate()
-        {
-            _sbo.SpecailInterestRateField();
-        }
+        //[Then(@"Check the Special Interest Checkbox")]
+        //public void ThenCheckTheSpecialInterestCheckbox()
+        //{
+        //    _sbo.SpecialInterestRate();
+        //}
+        //[Then(@"Enter Special Interest Rate")]
+        //public void ThenEnterSpecialInterestRate()
+        //{
+        //    _sbo.SpecailInterestRateField();
+        //}
 
         [Then(@"Enter Year")]
         public void ThenEnterYear()
@@ -438,157 +438,157 @@ namespace Affordit_Automation.Tests.Steps
             SelectBody.Click();
         }
 
-        [Then(@"Click on Next link for Co Borrower details")]
-        public void ThenClickOnNextLinkForCoBorrowerDetails()
-        {
-            _sbo.NextbtnlinkCoborrowerPersonal();
-        }
-        [Then(@"Enter Firstname of CoBorrower")]
-        public void ThenEnterFirstnameOfCoBorrower()
-        {
-            _sbo.CoBorrowerFirstName();
-        }
-        [Then(@"Enter Last name of CoBorrower")]
-        public void ThenEnterLastNameOfCoBorrower()
-        {
-            _sbo.CoBorrowerLastName();
-        }
-        [Then(@"Enter CoBorrower Date of Birth")]
-        public void ThenEnterCoBorrowerDateOfBirth()
-        {
-            IWebElement ClickonDate = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[3]/app-personal-information/div/div[2]/form/div[3]/div[1]/div[6]/mat-form-field/div/div[1]/div[1]/input")));
-            ClickonDate.Click();
-            IWebElement SelectDateOfBirth = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/div[3]/div[2]/div/mat-datepicker-content/div[2]/mat-calendar/div/mat-month-view/table/tbody/tr[1]/td[2]/div[1]")));
-            SelectDateOfBirth.Click();
-        }
+        //[Then(@"Click on Next link for Co Borrower details")]
+        //public void ThenClickOnNextLinkForCoBorrowerDetails()
+        //{
+        //    _sbo.NextbtnlinkCoborrowerPersonal();
+        //}
+        //[Then(@"Enter Firstname of CoBorrower")]
+        //public void ThenEnterFirstnameOfCoBorrower()
+        //{
+        //    _sbo.CoBorrowerFirstName();
+        //}
+        //[Then(@"Enter Last name of CoBorrower")]
+        //public void ThenEnterLastNameOfCoBorrower()
+        //{
+        //    _sbo.CoBorrowerLastName();
+        //}
+        //[Then(@"Enter CoBorrower Date of Birth")]
+        //public void ThenEnterCoBorrowerDateOfBirth()
+        //{
+        //    IWebElement ClickonDate = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[3]/app-personal-information/div/div[2]/form/div[3]/div[1]/div[6]/mat-form-field/div/div[1]/div[1]/input")));
+        //    ClickonDate.Click();
+        //    IWebElement SelectDateOfBirth = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/div[3]/div[2]/div/mat-datepicker-content/div[2]/mat-calendar/div/mat-month-view/table/tbody/tr[1]/td[2]/div[1]")));
+        //    SelectDateOfBirth.Click();
+        //}
 
-        [Then(@"Enter Coborrower Social ""(.*)""")]
-        public void ThenEnterCoborrowerSocial(string secnumber2)
-        {
-            _sbo.CoSecurityNumber(_propertyReader[secnumber2]);
+        //[Then(@"Enter Coborrower Social ""(.*)""")]
+        //public void ThenEnterCoborrowerSocial(string secnumber2)
+        //{
+        //    _sbo.CoSecurityNumber(_propertyReader[secnumber2]);
 
-        }
-        [Then(@"Click on Next link for Coborrower Other information")]
-        public void ThenClickOnNextLinkForCoborrowerOtherInformation()
-        {
-            _sbo.nextbtnlinkCoboOtherInfo();
-        }
-        [Then(@"Enter CoBorrower Address line one")]
-        public void ThenEnterCoBorrowerAddressLineOne()
-        {
-            _sbo.CoAddressLineOne();
-        }
-        [Then(@"Enter CoBorrower Address line two")]
-        public void ThenEnterCoBorrowerAddressLineTwo()
-        {
-            _sbo.CoAddressLinetwo();
-        }
-        [Then(@"Enter CoBorrower City")]
-        public void ThenEnterCoBorrowerCity()
-        {
-            _sbo.CityCoBorrower();
-        }
-        [Then(@"Enter CoBorrower ZipCode")]
-        public void ThenEnterCoBorrowerZipCode()
-        {
-            _sbo.CoZipCode();
-        }
-        [Then(@"Click Next Page Icon for CoBorrower")]
-        public void ThenClickNextPageIconForCoBorrower()
-        {
-            IWebElement ClickAddLiabilitiesnextlinkForCoborrower = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/div[2]/a[2]")));
-            ClickAddLiabilitiesnextlinkForCoborrower.Click();
-        }
-        [Then(@"Click Add Liabilities Button for CoBorrower")]
-        public void ThenClickAddLiabilitiesButtonForCoBorrower()
-        {
-            IWebElement ClickAddLiabilitiesButtonForCoborrower = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div/button")));
-            ClickAddLiabilitiesButtonForCoborrower.Click();
-        }
-        [Then(@"Select Liabilities for CoBorrower")]
-        public void ThenSelectLiabilitiesForCoBorrower()
-        {
-            IWebElement SelectLiabilitiesForCoborrower = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div[1]/app-liability/div/mat-card/div[2]/div/ng-select/div/div/div[2]/input")));
-            SelectLiabilitiesForCoborrower.Click();
-            IWebElement SelectLiabilitiesfromDropdown = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[4]")));
-            SelectLiabilitiesfromDropdown.Click();
-        }
-        [Then(@"Click on Balance Amount for CoBorrower")]
-        public void ThenClickOnBalanceAmountForCoBorrower()
-        {
-            IWebElement BalanceAmountForCoborrower = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div[1]/app-liability/div/mat-card/div[3]/div[3]/mat-form-field/div/div[1]/div/input")));
-            BalanceAmountForCoborrower.SendKeys("7000");
-        }
-        [Then(@"Click the Dropdown Icon for CoBorrower")]
-        public void ThenClickTheDropdownIconForCoBorrower()
-        {
-            IWebElement DropdownIconForCoborrower = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div[1]/app-liability/div/mat-card/div[3]/div[4]/div/a")));
-            DropdownIconForCoborrower.Click();
-        }
-        [Then(@"Check on Has Special Interest Rate")]
-        public void ThenCheckOnHasSpecialInterestRate()
-        {
-            IWebElement SpecialInterestCheckbox = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div[1]/app-liability/div/mat-card/div[4]/div[2]/div/mat-checkbox/label/span[1]")));
-            SpecialInterestCheckbox.Click();
-        }
+        //}
+        //[Then(@"Click on Next link for Coborrower Other information")]
+        //public void ThenClickOnNextLinkForCoborrowerOtherInformation()
+        //{
+        //    _sbo.nextbtnlinkCoboOtherInfo();
+        //}
+        //[Then(@"Enter CoBorrower Address line one")]
+        //public void ThenEnterCoBorrowerAddressLineOne()
+        //{
+        //    _sbo.CoAddressLineOne();
+        //}
+        //[Then(@"Enter CoBorrower Address line two")]
+        //public void ThenEnterCoBorrowerAddressLineTwo()
+        //{
+        //    _sbo.CoAddressLinetwo();
+        //}
+        //[Then(@"Enter CoBorrower City")]
+        //public void ThenEnterCoBorrowerCity()
+        //{
+        //    _sbo.CityCoBorrower();
+        //}
+        //[Then(@"Enter CoBorrower ZipCode")]
+        //public void ThenEnterCoBorrowerZipCode()
+        //{
+        //    _sbo.CoZipCode();
+        //}
+        //[Then(@"Click Next Page Icon for CoBorrower")]
+        //public void ThenClickNextPageIconForCoBorrower()
+        //{
+        //    IWebElement ClickAddLiabilitiesnextlinkForCoborrower = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/div[2]/a[2]")));
+        //    ClickAddLiabilitiesnextlinkForCoborrower.Click();
+        //}
+        //[Then(@"Click Add Liabilities Button for CoBorrower")]
+        //public void ThenClickAddLiabilitiesButtonForCoBorrower()
+        //{
+        //    IWebElement ClickAddLiabilitiesButtonForCoborrower = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div/button")));
+        //    ClickAddLiabilitiesButtonForCoborrower.Click();
+        //}
+        //[Then(@"Select Liabilities for CoBorrower")]
+        //public void ThenSelectLiabilitiesForCoBorrower()
+        //{
+        //    IWebElement SelectLiabilitiesForCoborrower = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div[1]/app-liability/div/mat-card/div[2]/div/ng-select/div/div/div[2]/input")));
+        //    SelectLiabilitiesForCoborrower.Click();
+        //    IWebElement SelectLiabilitiesfromDropdown = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[4]")));
+        //    SelectLiabilitiesfromDropdown.Click();
+        //}
+        //[Then(@"Click on Balance Amount for CoBorrower")]
+        //public void ThenClickOnBalanceAmountForCoBorrower()
+        //{
+        //    IWebElement BalanceAmountForCoborrower = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div[1]/app-liability/div/mat-card/div[3]/div[3]/mat-form-field/div/div[1]/div/input")));
+        //    BalanceAmountForCoborrower.SendKeys("7000");
+        //}
+        //[Then(@"Click the Dropdown Icon for CoBorrower")]
+        //public void ThenClickTheDropdownIconForCoBorrower()
+        //{
+        //    IWebElement DropdownIconForCoborrower = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div[1]/app-liability/div/mat-card/div[3]/div[4]/div/a")));
+        //    DropdownIconForCoborrower.Click();
+        //}
+        //[Then(@"Check on Has Special Interest Rate")]
+        //public void ThenCheckOnHasSpecialInterestRate()
+        //{
+        //    IWebElement SpecialInterestCheckbox = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div[1]/app-liability/div/mat-card/div[4]/div[2]/div/mat-checkbox/label/span[1]")));
+        //    SpecialInterestCheckbox.Click();
+        //}
 
-        [Then(@"Click on Original Loan Amount for CoBorrower")]
-        public void ThenClickOnOriginalLoanAmountForCoBorrower()
-        {
-            IWebElement OrignalLoanAmount = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div[1]/app-liability/div/mat-card/div[4]/div[1]/div[2]/mat-form-field/div/div[1]/div/input")));
-            OrignalLoanAmount.SendKeys("10000");
+        //[Then(@"Click on Original Loan Amount for CoBorrower")]
+        //public void ThenClickOnOriginalLoanAmountForCoBorrower()
+        //{
+        //    IWebElement OrignalLoanAmount = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div[1]/app-liability/div/mat-card/div[4]/div[1]/div[2]/mat-form-field/div/div[1]/div/input")));
+        //    OrignalLoanAmount.SendKeys("10000");
 
-        }
-        [Then(@"Click on Payment Amount for CoBorrower")]
-        public void ThenClickOnPaymentAmountForCoBorrower()
-        {
-            IWebElement PaymentAmountForCoborrower = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div[1]/app-liability/div/mat-card/div[4]/div[1]/div[6]/mat-form-field/div/div[1]/div/input")));
-            PaymentAmountForCoborrower.SendKeys("4000");
-        }
-        [Then(@"Enter Terms for CoBorrower")]
-        public void ThenEnterTermsForCoBorrower()
-        {
-            IWebElement TermsForCoborrower = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div[1]/app-liability/div/mat-card/div[4]/div[1]/div[3]/mat-form-field/div/div[1]/div/input")));
-            TermsForCoborrower.SendKeys("4");
-        }
-        [Then(@"Enter Interest Rate for CoBorrower")]
-        public void ThenEnterInterestRateForCoBorrower()
-        {
-            IWebElement RateForCoborrower = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div[1]/app-liability/div/mat-card/div[4]/div[1]/div[4]/mat-form-field/div/div[1]/div/input")));
-            RateForCoborrower.SendKeys("3");
-        }
-        [Then(@"Enter Special Interest Rate For Co Borrower")]
-        public void ThenEnterSpecialInterestRateForCoBorrower()
-        {
-            IWebElement SpecialInterestRate = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div[1]/app-liability/div/mat-card/div[4]/div[2]/div[2]/mat-form-field/div/div[1]/div/input")));
-            SpecialInterestRate.SendKeys("3");
-        }
+        //}
+        //[Then(@"Click on Payment Amount for CoBorrower")]
+        //public void ThenClickOnPaymentAmountForCoBorrower()
+        //{
+        //    IWebElement PaymentAmountForCoborrower = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div[1]/app-liability/div/mat-card/div[4]/div[1]/div[6]/mat-form-field/div/div[1]/div/input")));
+        //    PaymentAmountForCoborrower.SendKeys("4000");
+        //}
+        //[Then(@"Enter Terms for CoBorrower")]
+        //public void ThenEnterTermsForCoBorrower()
+        //{
+        //    IWebElement TermsForCoborrower = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div[1]/app-liability/div/mat-card/div[4]/div[1]/div[3]/mat-form-field/div/div[1]/div/input")));
+        //    TermsForCoborrower.SendKeys("4");
+        //}
+        //[Then(@"Enter Interest Rate for CoBorrower")]
+        //public void ThenEnterInterestRateForCoBorrower()
+        //{
+        //    IWebElement RateForCoborrower = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div[1]/app-liability/div/mat-card/div[4]/div[1]/div[4]/mat-form-field/div/div[1]/div/input")));
+        //    RateForCoborrower.SendKeys("3");
+        //}
+        //[Then(@"Enter Special Interest Rate For Co Borrower")]
+        //public void ThenEnterSpecialInterestRateForCoBorrower()
+        //{
+        //    IWebElement SpecialInterestRate = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div[1]/app-liability/div/mat-card/div[4]/div[2]/div[2]/mat-form-field/div/div[1]/div/input")));
+        //    SpecialInterestRate.SendKeys("3");
+        //}
 
-        [Then(@"Enter Year for CoBorrower")]
-        public void ThenEnterYearForCoBorrower()
-        {
-            IWebElement EnterYear = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div[1]/app-liability/div/mat-card/div[4]/div[5]/div[2]/div[1]/ng-select/div/div/div[2]/input")));
-            EnterYear.Click();
-            IWebElement Select = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[4]")));
-            Select.Click();
-        }
-        [Then(@"Enter Make for CoBorrower")]
-        public void ThenEnterMakeForCoBorrower()
-        {
-            IWebElement EnterYear = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div[1]/app-liability/div/mat-card/div[4]/div[5]/div[2]/div[2]/ng-select/div/div/div[2]/input")));
-            EnterYear.Click();
+        //[Then(@"Enter Year for CoBorrower")]
+        //public void ThenEnterYearForCoBorrower()
+        //{
+        //    IWebElement EnterYear = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div[1]/app-liability/div/mat-card/div[4]/div[5]/div[2]/div[1]/ng-select/div/div/div[2]/input")));
+        //    EnterYear.Click();
+        //    IWebElement Select = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[4]")));
+        //    Select.Click();
+        //}
+        //[Then(@"Enter Make for CoBorrower")]
+        //public void ThenEnterMakeForCoBorrower()
+        //{
+        //    IWebElement EnterYear = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div[1]/app-liability/div/mat-card/div[4]/div[5]/div[2]/div[2]/ng-select/div/div/div[2]/input")));
+        //    EnterYear.Click();
 
-            IWebElement Select = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[4]")));
-            Select.Click();
-        }
-        [Then(@"Enter Model for CoBorrower")]
-        public void ThenEnterModelForCoBorrower()
-        {
-            IWebElement EnterYear = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div[1]/app-liability/div/mat-card/div[4]/div[5]/div[2]/div[3]/ng-select/div/div/div[2]/input")));
-            EnterYear.Click();
-            IWebElement Select = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[3]")));
-            Select.Click();
-        }
+        //    IWebElement Select = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[4]")));
+        //    Select.Click();
+        //}
+        //[Then(@"Enter Model for CoBorrower")]
+        //public void ThenEnterModelForCoBorrower()
+        //{
+        //    IWebElement EnterYear = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[2]/div[1]/app-liability/div/mat-card/div[4]/div[5]/div[2]/div[3]/ng-select/div/div/div[2]/input")));
+        //    EnterYear.Click();
+        //    IWebElement Select = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[3]")));
+        //    Select.Click();
+        //}
         [Then(@"Click on Next link for Borrower Other information Page")]
         public void ThenClickOnNextLinkForBorrowerOtherInformationPage()
         {

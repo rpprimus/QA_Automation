@@ -678,6 +678,7 @@ C:\Primus\Affordit_Automation\bin\Debug\net472\System.Text.Encodings.Web.dll
 C:\Primus\Affordit_Automation\bin\Debug\net472\System.Threading.Tasks.Extensions.dll
 C:\Primus\Affordit_Automation\bin\Debug\net472\System.ValueTuple.dll
 C:\Primus\Affordit_Automation\bin\Debug\net472\Validation.dll
+C:\Primus\Affordit_Automation\obj\Debug\net472\Affordit_Automation.csprojAssemblyReference.cache
 C:\Primus\Affordit_Automation\obj\Debug\net472\Affordit_Automation.dll.config
 C:\Primus\Affordit_Automation\obj\Debug\net472\Affordit_Automation.AssemblyInfoInputs.cache
 C:\Primus\Affordit_Automation\obj\Debug\net472\Affordit_Automation.AssemblyInfo.cs
@@ -685,4 +686,3 @@ C:\Primus\Affordit_Automation\obj\Debug\net472\Affordit_Automation.csproj.CoreCo
 C:\Primus\Affordit_Automation\obj\Debug\net472\Affordit_Automation.csproj.CopyComplete
 C:\Primus\Affordit_Automation\obj\Debug\net472\Affordit_Automation.dll
 C:\Primus\Affordit_Automation\obj\Debug\net472\Affordit_Automation.pdb
-C:\Primus\Affordit_Automation\obj\Debug\net472\Affordit_Automation.csprojAssemblyReference.cache
