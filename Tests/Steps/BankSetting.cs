@@ -22,7 +22,7 @@ namespace Affordit_Automation.Tests.Steps
             _propertyReader = PropertyReader.Instance;
             _bSPageObject = new BankSettingPageObject(_driver);
         }
-        [When(@"Click on Hamberber Menu")]
+        [When(@"Click on Hamburger Menu")]
         public void WhenClickOnHamberberMenu()
         {
             

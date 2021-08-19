@@ -163,7 +163,7 @@ namespace Affordit_Automation.PageObjects
         }
         public void UploadFile()
         {
-            string path = @"C:\Users\ROSHAN\OneDrive - Primus Software Corporation\Desktop\title-logo.png";
+            string path = @"C:\title-logo.png";
             Click(selectfile);
             AutoItX3 auto = new AutoItX3();
             auto.WinActivate("Open");
