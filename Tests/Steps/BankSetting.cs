@@ -146,7 +146,7 @@ namespace Affordit_Automation.Tests.Steps
         {
             _bSPageObject.ClickOnDropDown();
         }
-        [Then(@"Select Logo from dropdown")]
+        [Then(@"Select from dropdown")]
         public void ThenSelectLogoFromDropdown()
         {
             _bSPageObject.SelectPurpose();

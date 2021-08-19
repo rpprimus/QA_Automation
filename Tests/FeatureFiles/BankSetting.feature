@@ -54,7 +54,7 @@ Scenario:Scenario_07_Tenant Files Part-1 Uplaod File PRIM-232
 	Then Click on Tenant Files
 	Then Click on Upload button
 	Then Choose on Purpose from Dropdown
-	Then Select Logo from dropdown
+	Then Select from dropdown
 	Then Select File to Upload
 	Then Click on Upload Button to Upload File or Logo
 Scenario:Scenario_09_Tenant Files Part-3 Update File PRIM-232
