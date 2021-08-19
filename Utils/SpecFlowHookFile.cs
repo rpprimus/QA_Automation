@@ -113,6 +113,8 @@ namespace Affordit_Automation.Utils
 		public static void InitializeDriver()
 		{
 			htmlReporter = new ExtentHtmlReporter(_propertyReader.GetPath()+@"\ExtentReport\");
+			htmlReporter.Config.Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Dark;
+			htmlReporter.LoadConfig(_propertyReader.GetPath() + @"\ExtentReport\extent-config.xml");
 			extent = new ExtentReports();
 			extent.AttachReporter(htmlReporter);
 			extent.AddSystemInfo("Host Name", "Primus Software");

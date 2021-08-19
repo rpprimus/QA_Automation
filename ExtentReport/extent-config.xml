@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<extentreports>
+	<configuration>
+		<!-- report theme -->
+		<!-- standard, dark -->
+		<theme>standard</theme>
+
+		<!-- document encoding -->
+		<!-- defaults to UTF-8 -->
+		<encoding>UTF-8</encoding>
+
+		<!-- protocol for script and stylesheets -->
+		<!-- defaults to https -->
+		<protocol>https</protocol>
+
+		<!-- title of the document -->
+		<documentTitle>AffordIT Automation Report</documentTitle>
+
+		<!-- report headline - displayed at top-nav, after reportHeadline -->
+		<reportHeadline>AffordIT Automation Report</reportHeadline>
+
+		<!-- report name - displayed at top-nav -->
+		<reportName>
+			<![CDATA[
+             
+				<img src="https://login-qa.affordit.com/logos/title-logo.png" class="brandLogo" width="150" height= "50">
+            ]]>
+		</reportName>
+
+
+		<!-- location of charts in the test view -->
+		<!-- top, bottom -->
+		<testViewChartLocation>bottom</testViewChartLocation>
+
+		<!-- custom javascript -->
+		<scripts>
+			<![CDATA[
+      
+      ]]>
+		</scripts>
+
+		<!-- custom styles -->
+		<styles>
+			<![CDATA[
+			.nav-logo {display: none}
+         .report-name { padding-left: 10px; } .report-name > img { float: left;height: 90%;margin-left: 30px;margin-top: 2px;width: auto;} 
+		 .badge.badge-primary{ background:transparent;}
+        ]]>
+		</styles>
+	</configuration>
+</extentreports>
