@@ -17,13 +17,10 @@ namespace Affordit_Automation.Tests.Steps
     public sealed class Add_Edit_Tenant_User_StepDefination
     {
         private IWebDriver _driver;
-
         Actions act;
-
         protected readonly PropertyReader _propertyReader;
         protected readonly Add_Edit_Tenant_User_PageObjects _add_Edit_Tenant_User_PageObjects;
-        // protected string loggedUser;
-       
+        
         private readonly ScenarioContext _scenarioContext;
 
         public Add_Edit_Tenant_User_StepDefination(IWebDriver driver)

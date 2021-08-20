@@ -22,8 +22,6 @@ namespace Affordit_Automation.Tests.Steps
 
         protected readonly PropertyReader _propertyReader;
         protected readonly BillingAndInvoicePageObjects _billingAndInvoicePageObjects;
-        // protected string loggedUser;
-       
         private readonly ScenarioContext _scenarioContext;
 
         public BillingAndInvoiceStepDefinition(IWebDriver driver)
