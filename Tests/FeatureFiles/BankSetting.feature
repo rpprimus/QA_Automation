@@ -54,7 +54,7 @@ Scenario:Scenario_07_Tenant Files Part-1 Uplaod File PRIM-232
 	Then Click on Tenant Files
 	Then Click on Upload button
 	Then Choose on Purpose from Dropdown
-	Then Select from dropdown
+	Then Select "Logo" from dropdown
 	Then Select File to Upload
 	Then Click on Upload Button to Upload File or Logo
 Scenario:Scenario_09_Tenant Files Part-3 Update File PRIM-232
@@ -92,3 +92,13 @@ Scenario: Scenario_11_Loan Types PRIM-264
 	Then Select Personal for Loan Group
 	Then Enter Loan Type
 	Then Click on Add Loan Type Button
+Scenario: Scenario_12_Refinance Options PRIM-222
+	#Given Navigate to New Application Page with "CorrectUsername" and "CorrectPassword" 
+	#And Select "Meridian Test (MER)" tenent
+	When Click on Hamburger Menu 
+	Then Click on Bank Setting
+	Then Click on Refinance Option
+	Then Click on New Mortgage
+	Then Click on Loan Type for Refinace Option
+	Then Select an Option from the List
+	Then Click on Save Refinace Option

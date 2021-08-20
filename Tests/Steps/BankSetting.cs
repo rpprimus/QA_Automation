@@ -146,10 +146,10 @@ namespace Affordit_Automation.Tests.Steps
         {
             _bSPageObject.ClickOnDropDown();
         }
-        [Then(@"Select from dropdown")]
-        public void ThenSelectLogoFromDropdown()
+        [Then(@"Select ""(.*)"" from dropdown")]
+        public void ThenSelectFromDropdown(string purpose)
         {
-            _bSPageObject.SelectPurpose();
+            _bSPageObject.SelectPurpose(purpose);
         }
         [Then(@"Select File to Upload")]
         public void ThenSelectFileToUpload()

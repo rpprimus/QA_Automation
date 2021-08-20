@@ -36,7 +36,6 @@ namespace Affordit_Automation.PageObjects
         public By heloan => ByLocator("/html/body/app-root/app-private-layout/app-manage/div/div/div/app-loan-group-options/div/div[2]/table/tbody/tr[16]/td[2]/mat-slide-toggle");
         public By purpose => ByLocator("/html/body/modal-container/div[2]/div/app-upload-tenant-file-modal/app-upload-file-modal/div[2]/mat-form-field/div/div[1]/div/mat-select/div/div[2]/div");
         public By Uploadbtn => ByLocator("//button[contains(text(),'Upload')]");
-        public By logo => ByLocator("/html/body/div[3]/div[2]/div/div/div/mat-option[2]/span");
         public By selectfile => ByLocator("/html/body/modal-container/div[2]/div/app-upload-tenant-file-modal/app-upload-file-modal/div[2]/div/app-copernicus-file-uploader/div/label");
         public By uploadbtn => ByLocator("/html/body/modal-container/div[2]/div/app-upload-tenant-file-modal/app-upload-file-modal/div[2]/div/app-copernicus-file-uploader/div/button");
         public By deletebtn => ByLocator("/html/body/app-root/app-private-layout/app-manage/div/div/div/app-tenant-files/div/table/tbody/tr/td[7]/button[3]/span");
@@ -50,8 +49,15 @@ namespace Affordit_Automation.PageObjects
         public By addloanbtn => ByLocator("//button[contains(text(),'Add Loan Type')]");
         public By dropdownloantype => ByLocator("/html/body/modal-container/div[2]/div/app-configurable-loan-type-modal/div[2]/form/ng-select/div/span");
         public By saveloantype => ByLocator("/html/body/modal-container/div[2]/div/app-configurable-loan-type-modal/div[3]/button");
+        public By mortgage20=>ByLocator("//span[text()='Mortgage 20 Year']");
+        public By refinanceloantype => ByLocator("/html/body/app-root/app-private-layout/app-manage/div/div/div/app-refinance-options/div/div/form/mat-accordion/mat-expansion-panel[7]/div/div/div/ng-select/div/div/div[6]");
         public BankSettingPageObject(IWebDriver driver) : base(driver)
         {
+        }
+        public By Purpose(string purpose)
+        {
+            return ByLocator($"//div//span[contains(text(),'{purpose}')]");
+
         }
         public By LoanGroupOption()
         {
@@ -157,9 +163,9 @@ namespace Affordit_Automation.PageObjects
         {
             Click(purpose);
         }
-        public void SelectPurpose()
+        public void SelectPurpose(string pur)
         {
-            Click(logo);
+            Click(Purpose(pur));
         }
         public void UploadFile()
         {
