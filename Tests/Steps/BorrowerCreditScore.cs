@@ -38,7 +38,7 @@ namespace Affordit_Automation.Tests.Steps
             _BorrowerCreditScorePageObject.EnterPassword(_propertyReader[password]);
             _BorrowerCreditScorePageObject.ClickOnLoginButtonNew();
         }
-        [Given(@"Select ""(.*)"" tenent")]
+        [Given(@"Select ""(.*)"" tenant")]
         public void GivenSelectTenent(string tenent)
         {
             _BorrowerCreditScorePageObject.SelectTenent(tenent);

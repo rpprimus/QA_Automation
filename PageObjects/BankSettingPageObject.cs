@@ -30,7 +30,7 @@ namespace Affordit_Automation.PageObjects
         public By tif => ByLocator("(//input[@data-placeholder='Rank'])[2]");
         public By ccclassic => ByLocator("//span[contains(text(),'Credit Card Classic')]");  
         public By usedauto => ByLocator("//span[contains(text(),'Used Auto')]");
-        public By interestrateft => ByLocator("/html/body/app-root/app-private-layout/app-manage/div/div/div/app-product-financial-tables/div/div/div[2]/mat-accordion/mat-expansion-panel[1]/div/div/div[4]/div[1]/table/tr[3]/td[3]/input");
+        public By interestrateft => ByLocator("/html/body/app-root/app-private-layout/app-manage/div/div/div/app-product-financial-tables/div/div/div[2]/mat-accordion/mat-expansion-panel[1]/div/div/div[3]/div[1]/table/tr[3]/td[3]/input");
         public By insurancetoggle => ByLocator("/html/body/app-root/app-private-layout/app-manage/div/div/div/app-cross-sell-items/div/div[3]/table/tbody/tr[2]/td[3]/mat-slide-toggle/label/div");
         public By savesubmitbtnfinance => ByLocator("(//button[contains(text(),'Save and Submit')])[1]");
         public By heloan => ByLocator("/html/body/app-root/app-private-layout/app-manage/div/div/div/app-loan-group-options/div/div[2]/table/tbody/tr[16]/td[2]/mat-slide-toggle");
@@ -49,8 +49,15 @@ namespace Affordit_Automation.PageObjects
         public By addloanbtn => ByLocator("//button[contains(text(),'Add Loan Type')]");
         public By dropdownloantype => ByLocator("/html/body/modal-container/div[2]/div/app-configurable-loan-type-modal/div[2]/form/ng-select/div/span");
         public By saveloantype => ByLocator("/html/body/modal-container/div[2]/div/app-configurable-loan-type-modal/div[3]/button");
+        public By newmortagage => ByLocator("/html/body/app-root/app-private-layout/app-manage/div/div/div/app-refinance-options/div/div/form/mat-accordion/mat-expansion-panel[7]/mat-expansion-panel-header");
         public By mortgage20=>ByLocator("//span[text()='Mortgage 20 Year']");
         public By refinanceloantype => ByLocator("/html/body/app-root/app-private-layout/app-manage/div/div/div/app-refinance-options/div/div/form/mat-accordion/mat-expansion-panel[7]/div/div/div/ng-select/div/div/div[6]");
+        public By liabilityApp => ByLocator("//a[contains(text(),'Liability Appraisal')]");
+        public By usedautoliability => ByLocator("//span[contains(text(),'Used Automobile')]");
+        public By usedLiablitybalanceapp => ByLocator("/html/body/app-root/app-private-layout/app-manage/div/div/div/app-liability-appraisal/div[4]/mat-checkbox/label");
+        public By borroweloangroupappriasal => ByLocator("/html/body/app-root/app-private-layout/app-manage/div/div/div/app-liability-appraisal/div[2]/mat-form-field/div/div[1]/div/mat-select/div/div[1]");
+        public By refinacesavebtn => ByLocator("(//button[contains(text(),'Save Refinance Options')])[1]");
+        public By savesettings => ByLocator("//button[contains(text(),'Save Settings')]");
         public BankSettingPageObject(IWebDriver driver) : base(driver)
         {
         }
@@ -147,7 +154,7 @@ namespace Affordit_Automation.PageObjects
         }
         public void ToggleLoangroup()
         {
-           // Thread.Sleep(2000);
+           // Thread.Sleep(5000);
             Click(heloan);
           // Thread.Sleep(5000);
         }
@@ -232,6 +239,51 @@ namespace Affordit_Automation.PageObjects
         public void SaveLoanType()
         {
             Click(saveloantype);
+        }
+        public void NewMortgage()
+        {
+           // Thread.Sleep(5000);
+            Click(newmortagage);
+        }
+        public void ClickOnNewMortage()
+        {
+           // Thread.Sleep(5000);
+            Click(refinanceloantype);
+        }
+        public void SelectLoanTypeForRefinance()
+        {
+           // Thread.Sleep(5000);
+            Click(mortgage20);
+        }
+        public void SaveRefinaceOption()
+        {
+          //  Thread.Sleep(5000);
+            Click(refinacesavebtn);
+        }
+        public void LiabilityAppraisal()
+        {
+            Click(liabilityApp);
+        }
+        public void ClickonBorrowerLoanGroupApp()
+        {
+           // Thread.Sleep(2000);
+            Click(borroweloangroupappriasal);
+        }
+        public void SelectOnDropdownItem()
+        {
+           // Thread.Sleep(1000);
+            Click(usedautoliability);
+           // Thread.Sleep(2000);
+        }
+        public void ClickonLiabilityBalance()
+        {
+          //  Thread.Sleep(1000);
+            Click(usedLiablitybalanceapp);
+        }
+        public void SaveSetting()
+        {
+            Click(savesettings);
+          //  Thread.Sleep(5000);
         }
     }
 }

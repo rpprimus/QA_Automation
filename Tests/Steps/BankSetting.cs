@@ -1,6 +1,7 @@
 ﻿using Affordit_Automation.PageObjects;
 using Affordit_Automation.Utils;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,11 +17,13 @@ namespace Affordit_Automation.Tests.Steps
         private IWebDriver _driver;
         protected readonly PropertyReader _propertyReader;
         protected readonly BankSettingPageObject _bSPageObject;
+       public Actions act;
         public BankSetting(IWebDriver driver)
         {
             _driver = driver;
             _propertyReader = PropertyReader.Instance;
             _bSPageObject = new BankSettingPageObject(_driver);
+            act = new Actions(_driver);
         }
         [When(@"Click on Hamburger Menu")]
         public void WhenClickOnHamberberMenu()
@@ -223,6 +226,54 @@ namespace Affordit_Automation.Tests.Steps
         {
             _bSPageObject.SaveLoanType();
             Thread.Sleep(5000);
+        }
+        [Then(@"Click on New Mortgage")]
+        public void ThenClickOnNewMortgage()
+        {
+            _bSPageObject.NewMortgage(); 
+        }
+        [Then(@"Click on Loan Type for Refinace Option")]
+        public void ThenClickOnLoanTypeForRefinaceOption()
+        {
+            _bSPageObject.ClickOnNewMortage();
+        }
+        [Then(@"Select an Option from the List")]
+        public void ThenSelectAnOptionFromTheList()
+        {
+            _bSPageObject.SelectLoanTypeForRefinance();
+        }
+        [Then(@"Click on Save Refinance Option")]
+        public void ThenClickOnSaveRefinanceOption()
+        {
+            _bSPageObject.SaveRefinaceOption();
+        }
+        [Then(@"Click on Liability Appraisal")]
+        public void ThenClickOnLiabilityAppraisal()
+        {
+            _bSPageObject.LiabilityAppraisal();
+        }
+        [Then(@"Click on Borrower Loan Groups to Appraise")]
+        public void ThenClickOnBorrowerLoanGroupsToAppraise()
+        {
+            _bSPageObject.ClickonBorrowerLoanGroupApp();
+        }
+        [Then(@"Select an Option from the List for Liability Appraisal")]
+        public void ThenSelectAnOptionFromTheListForLiabilityAppraisal()
+        {
+            _bSPageObject.SelectOnDropdownItem();
+            Thread.Sleep(2000);
+           
+        }
+        [Then(@"Click on Use liability balance as appraisal value if an appraisal value cannot be determined")]
+        public void ThenClickOnUseLiabilityBalanceAsAppraisalValueIfAnAppraisalValueCannotBeDetermined()
+        {
+          
+            _bSPageObject.ClickonLiabilityBalance();
+        }
+        [Then(@"Click on Save Setting")]
+        public void ThenClickOnSaveSetting()
+        {
+            _bSPageObject.SaveSetting();
         }
 
     }

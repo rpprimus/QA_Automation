@@ -123,7 +123,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("Navigate to New Application Page with \"CorrectUsername\" and \"CorrectPassword\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 4
- testRunner.And("Select \"Meridian Test (MER)\" tenent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("Select \"Meridian Test (MER)\" tenant", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 5
  testRunner.When("Click on Hamburger Menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -392,13 +392,13 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Scenario_06_Loan Group Options PRIM-232")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Scenario_07_Loan Group Options PRIM-232")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "PRIM-192 As a user I should be able to modify the Bank Settings")]
-        public virtual void Scenario_06_LoanGroupOptionsPRIM_232()
+        public virtual void Scenario_07_LoanGroupOptionsPRIM_232()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Scenario_06_Loan Group Options PRIM-232", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Scenario_07_Loan Group Options PRIM-232", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 44
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -436,13 +436,13 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Scenario_07_Tenant Files Part-1 Uplaod File PRIM-232")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Scenario_08_Tenant Files Part-1 Uplaod File PRIM-232")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "PRIM-192 As a user I should be able to modify the Bank Settings")]
-        public virtual void Scenario_07_TenantFilesPart_1UplaodFilePRIM_232()
+        public virtual void Scenario_08_TenantFilesPart_1UplaodFilePRIM_232()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Scenario_07_Tenant Files Part-1 Uplaod File PRIM-232", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Scenario_08_Tenant Files Part-1 Uplaod File PRIM-232", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 49
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -463,12 +463,6 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 50
- testRunner.Given("Navigate to New Application Page with \"CorrectUsername\" and \"CorrectPassword\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 51
- testRunner.And("Select \"Meridian Test (MER)\" tenent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
 #line 52
  testRunner.When("Click on Hamburger Menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
@@ -548,13 +542,13 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Scenario_09_Tenant Files Part-4 Download File PRIM-232")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Scenario_10_Tenant Files Part-4 Download File PRIM-232")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "PRIM-192 As a user I should be able to modify the Bank Settings")]
-        public virtual void Scenario_09_TenantFilesPart_4DownloadFilePRIM_232()
+        public virtual void Scenario_10_TenantFilesPart_4DownloadFilePRIM_232()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Scenario_09_Tenant Files Part-4 Download File PRIM-232", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Scenario_10_Tenant Files Part-4 Download File PRIM-232", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 69
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -592,13 +586,13 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Scenario_10_Tenant Files Part-2 Delete File PRIM-232")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Scenario_11_Tenant Files Part-2 Delete File PRIM-232")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "PRIM-192 As a user I should be able to modify the Bank Settings")]
-        public virtual void Scenario_10_TenantFilesPart_2DeleteFilePRIM_232()
+        public virtual void Scenario_11_TenantFilesPart_2DeleteFilePRIM_232()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Scenario_10_Tenant Files Part-2 Delete File PRIM-232", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Scenario_11_Tenant Files Part-2 Delete File PRIM-232", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 76
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -639,13 +633,13 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Scenario_11_Loan Types PRIM-264")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Scenario_12_Loan Types PRIM-264")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "PRIM-192 As a user I should be able to modify the Bank Settings")]
-        public virtual void Scenario_11_LoanTypesPRIM_264()
+        public virtual void Scenario_12_LoanTypesPRIM_264()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Scenario_11_Loan Types PRIM-264", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Scenario_12_Loan Types PRIM-264", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 84
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -695,13 +689,13 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Scenario_12_Refinance Options PRIM-222")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Scenario_13_Refinance Options PRIM-222")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "PRIM-192 As a user I should be able to modify the Bank Settings")]
-        public virtual void Scenario_12_RefinanceOptionsPRIM_222()
+        public virtual void Scenario_13_RefinanceOptionsPRIM_222()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Scenario_12_Refinance Options PRIM-222", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Scenario_13_Refinance Options PRIM-222", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 95
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -741,7 +735,61 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Then("Select an Option from the List", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 104
- testRunner.Then("Click on Save Refinace Option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("Click on Save Refinance Option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Scenario_14_Liability Appraisal PRIM-265")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "PRIM-192 As a user I should be able to modify the Bank Settings")]
+        public virtual void Scenario_14_LiabilityAppraisalPRIM_265()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Scenario_14_Liability Appraisal PRIM-265", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 105
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 108
+ testRunner.When("Click on Hamburger Menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 109
+ testRunner.Then("Click on Bank Setting", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 110
+ testRunner.Then("Click on Liability Appraisal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 111
+ testRunner.Then("Click on Borrower Loan Groups to Appraise", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 112
+ testRunner.Then("Select an Option from the List for Liability Appraisal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 113
+ testRunner.Then("Click on Use liability balance as appraisal value if an appraisal value cannot be" +
+                        " determined", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 114
+ testRunner.Then("Click on Save Setting", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
