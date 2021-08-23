@@ -6671,8 +6671,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ROSHAN\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Ajay\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -6680,14 +6679,11 @@
       "projectUniqueName": "C:\\Primus\\Affordit_Automation\\Affordit_Automation.csproj",
       "projectName": "Affordit_Automation",
       "projectPath": "C:\\Primus\\Affordit_Automation\\Affordit_Automation.csproj",
-      "packagesPath": "C:\\Users\\ROSHAN\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\Ajay\\.nuget\\packages\\",
       "outputPath": "C:\\Primus\\Affordit_Automation\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\ROSHAN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ajay\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6760,7 +6756,7 @@
             "version": "[2.5.42, )"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
