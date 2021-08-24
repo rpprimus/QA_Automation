@@ -12,5 +12,6 @@
     <Import Project="$(NuGetPackageRoot)mstest.testadapter\2.1.2\build\net45\MSTest.TestAdapter.targets" Condition="Exists('$(NuGetPackageRoot)mstest.testadapter\2.1.2\build\net45\MSTest.TestAdapter.targets')" />
     <Import Project="$(NuGetPackageRoot)microsoft.codecoverage\16.5.0\build\netstandard1.0\Microsoft.CodeCoverage.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.codecoverage\16.5.0\build\netstandard1.0\Microsoft.CodeCoverage.targets')" />
     <Import Project="$(NuGetPackageRoot)microsoft.net.test.sdk\16.5.0\build\net40\Microsoft.NET.Test.Sdk.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.net.test.sdk\16.5.0\build\net40\Microsoft.NET.Test.Sdk.targets')" />
+    <Import Project="$(NuGetPackageRoot)autoitx.dotnet\3.3.14.5\build\AutoItX.Dotnet.targets" Condition="Exists('$(NuGetPackageRoot)autoitx.dotnet\3.3.14.5\build\AutoItX.Dotnet.targets')" />
   </ImportGroup>
 </Project>

@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.7.2": {
+      "AutoItX.Dotnet/3.3.14.5": {
+        "type": "package",
+        "compile": {
+          "lib/AutoItX3.Assembly.dll": {}
+        },
+        "runtime": {
+          "lib/AutoItX3.Assembly.dll": {}
+        },
+        "build": {
+          "build/AutoItX.Dotnet.targets": {}
+        }
+      },
       "BoDi/1.5.0": {
         "type": "package",
         "compile": {
@@ -2011,6 +2023,22 @@
     }
   },
   "libraries": {
+    "AutoItX.Dotnet/3.3.14.5": {
+      "sha512": "pobGb0PovHfJLH6tC2wsmafuZSI3u9ThqyHBebipVm9I/eDjzXZ6E6O84vUpE48lwTxPmtPm2HN/1tq0aLbM0Q==",
+      "type": "package",
+      "path": "autoitx.dotnet/3.3.14.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "autoitx.dotnet.3.3.14.5.nupkg.sha512",
+        "autoitx.dotnet.nuspec",
+        "build/AutoItX.Dotnet.targets",
+        "build/AutoItX3.dll",
+        "build/AutoItX3_x64.dll",
+        "lib/AutoItX3.Assembly.dll",
+        "lib/AutoItX3.Assembly.xml"
+      ]
+    },
     "BoDi/1.5.0": {
       "sha512": "CzIPzdIAFSd2zuLxI+0K9s48Qv3HQDbWiApn9h96j284rHs2bSPrn/PMca3mi4q3xLSEqOp+GUJ6+mXDD9prKg==",
       "type": "package",
@@ -6656,6 +6684,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
+      "AutoItX.Dotnet >= 3.3.14.5",
       "DotNetSeleniumExtras.WaitHelpers >= 3.11.0",
       "ExtentReports >= 4.1.0",
       "FluentAssertions >= 5.10.3",
@@ -6711,6 +6740,10 @@
     "frameworks": {
       "net472": {
         "dependencies": {
+          "AutoItX.Dotnet": {
+            "target": "Package",
+            "version": "[3.3.14.5, )"
+          },
           "DotNetSeleniumExtras.WaitHelpers": {
             "target": "Package",
             "version": "[3.11.0, )"

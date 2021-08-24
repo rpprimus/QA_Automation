@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "hyhKge68w9mMsuvVNjcHOk919HCAPkbkI9XuLqx1VYxNNM216aBoMvm7MHOfAVo2sWrI2GMKVKHKHAGIVy7jMg==",
+  "dgSpecHash": "6G4ZycidCNebopgHpdZdhXI7a7edx2IMTmjuoFQ+YVRvAZ4Xe/VjbkMU5jPgctN/3/LZl0t4vFKn6AneITCXEA==",
   "success": true,
   "projectFilePath": "C:\\Primus\\Affordit_Automation\\Affordit_Automation.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ROSHAN\\.nuget\\packages\\autoitx.dotnet\\3.3.14.5\\autoitx.dotnet.3.3.14.5.nupkg.sha512",
     "C:\\Users\\ROSHAN\\.nuget\\packages\\bodi\\1.5.0\\bodi.1.5.0.nupkg.sha512",
     "C:\\Users\\ROSHAN\\.nuget\\packages\\crc32c.net\\1.0.5\\crc32c.net.1.0.5.nupkg.sha512",
     "C:\\Users\\ROSHAN\\.nuget\\packages\\cucumber.messages\\6.0.1\\cucumber.messages.6.0.1.nupkg.sha512",

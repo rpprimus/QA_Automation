@@ -1,5 +1,5 @@
 ﻿using Affordit_Automation.Utils;
-using AutoItX3Lib;
+using AutoIt;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
@@ -178,11 +178,11 @@ namespace Affordit_Automation.PageObjects
         {
             string path = @"C:\title-logo.png";
             Click(selectfile);
-            AutoItX3 auto = new AutoItX3();
-            auto.WinActivate("Open");
-            auto.Send(path);
+            // AutoItX auto = new AutoItX();
+            AutoItX.WinActivate("Open");
+            AutoItX.Send(path);
             //Thread.Sleep(1000);
-            auto.Send("{ENTER}");
+            AutoItX.Send("{ENTER}");
            // Thread.Sleep(1000);
         }
         public void ClickOnUploadButton()
@@ -273,7 +273,9 @@ namespace Affordit_Automation.PageObjects
         {
            // Thread.Sleep(1000);
             Click(usedautoliability);
-           // Thread.Sleep(2000);
+            // AutoIt a = new AutoIt();
+            AutoItX.Send("{ESC}");
+
         }
         public void ClickonLiabilityBalance()
         {
