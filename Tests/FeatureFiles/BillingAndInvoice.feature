@@ -1,11 +1,9 @@
 ﻿Feature: PRIM-242 As a User I should be able to add/edit the Billing and Pricing section for the SBO reports
 	
-Background: 
-	Given I am navigating onto the Affordit Loginpage
 
 Scenario: Scenario_01_Billing with Flat Rate Pricing (PRIM-268) 
-	And Navigate to New Application Page with "CorrectUsername" and "CorrectPassword" 
-	And Select "Meridian Test (MER)" tenent
+	Given Navigate to New Application Page with "CorrectUsername" and "CorrectPassword" 
+	And Select "Meridian Test (MER)" tenant
 	Then Click the Menu Icon appears on top left of screen
 	Then Click on Billing and Invoice
 	Then Enter Price Per Report

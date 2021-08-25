@@ -1,11 +1,9 @@
 ﻿Feature: PRIM-162 Liabilities for Borrower and CoBorrower
 	
-Background: 
-	Given I am navigating onto the Affordit Loginpage
 
 Scenario: Scenario_01_Add Liabilities details for Borrower (PRIM-200)
-    And Navigate to New Application Page with "CorrectUsername" and "CorrectPassword" 
-	And Select "Meridian Test (MER)" tenent
+   Given Navigate to New Application Page with "CorrectUsername" and "CorrectPassword" 
+	And Select "Meridian Test (MER)" tenant
 	And Click on New Application Button
 	Then Click on Liabilities
 	Then click Add Liabilities

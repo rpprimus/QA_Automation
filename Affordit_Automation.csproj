@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net472</TargetFramework>
+    <UserSecretsId>07b4d56f-0d53-430b-a32e-1080230d0ca2</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -9,6 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoItX.Dotnet" Version="3.3.14.5" />
     <PackageReference Include="DotNetSeleniumExtras.WaitHelpers" Version="3.11.0" />
     <PackageReference Include="ExtentReports" Version="4.1.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />

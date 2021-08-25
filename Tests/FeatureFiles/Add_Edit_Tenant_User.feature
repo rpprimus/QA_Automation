@@ -1,11 +1,9 @@
 ﻿Feature: PRIM-240 As a User I should be able to add and edit Tenant/User under Security Settings
 	
-Background: 
-	Given I am navigating onto the Affordit Loginpage
 
 Scenario: Scenario_01_Add New Tenant with Third Party Integration Meridian (PRIM-252) 
-	And Navigate to New Application Page with "CorrectUsername" and "CorrectPassword" 
-	And Select "Meridian Test (MER)" tenent
+	Given Navigate to New Application Page with "CorrectUsername" and "CorrectPassword" 
+	And Select "Meridian Test (MER)" tenant
 	Then Click the Menu Icon appears on top left of screen
 	Then Click on Security Settings
 	Then Click on Create New Tenant Button
