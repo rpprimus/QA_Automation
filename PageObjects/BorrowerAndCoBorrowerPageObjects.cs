@@ -28,9 +28,9 @@ namespace Affordit_Automation.PageObjects
 		public BorrowerAndCoBorrowerPageObjects(IWebDriver driver) : base(driver)
 		{
 		}
-		public By TenentXpathNew(string tenent)
+		public By TenentXpathNew(string tenant)
 		{
-			return ByLocator($"//li[contains(@class,'list-group-item')]/label[contains(text(),'{tenent}')]");
+			return ByLocator($"//li[contains(@class,'list-group-item')]/label[contains(text(),'{tenant}')]");
 		}
 		public void EnterUserNameNew(string name)
 		{

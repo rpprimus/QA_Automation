@@ -3,7 +3,7 @@ Feature: PRIM-158 - For Primary Borrower - Enter All Credit Score within Limit (
 
 Scenario: Scenario_01_Enter All Credit Score within Limit
     Given Navigate to New Application Page with "CorrectUsername" and "CorrectPassword" 
-	And Select "Meridian Test (MER)" tenent
+	And Select "Meridian Test (MER)" tenant
 	And Click on New Application Button
 	When Click on Next For Credit Records
 	And Enter Correct "CreditScore1" and "CreditScore2" and "CreditScore3"

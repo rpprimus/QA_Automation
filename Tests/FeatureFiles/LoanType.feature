@@ -1,10 +1,8 @@
 ﻿Feature: PRIM-191 Loan Type for Borrower and CoBorrower
-Background: 
-	Given I am navigating onto the Affordit Loginpage
 
 Scenario: Scenario_01_Add Loan Type for MORTGAGE (PRIM-225)
-	And Navigate to New Application Page with "CorrectUsername" and "CorrectPassword" 
-	And Select "Meridian Test (MER)" tenent
+	Given Navigate to New Application Page with "CorrectUsername" and "CorrectPassword" 
+	And Select "Meridian Test (MER)" tenant
 	And Click on New Application Button
 	When Click on Next Icon For Credit Records
 	And Enter "CreditScore1" and "CreditScore2" and "CreditScore3" between limits
