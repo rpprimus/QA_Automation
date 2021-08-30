@@ -275,6 +275,21 @@ namespace Affordit_Automation.Tests.Steps
         {
             _bSPageObject.SaveSetting();
         }
+        [Then(@"Click on Miscellaneous Settings")]
+        public void ThenClickOnMiscellaneousSettings()
+        {
+            _bSPageObject.MiscSettingLink();
+        }
+        [Then(@"Click on Enable Remaining Loan Term Refinance Check")]
+        public void ThenClickOnEnableRemainingLoanTermRefinanceCheck()
+        {
+            _bSPageObject.RemainingLoanTermRefinance();
+        }
+        [Then(@"Click on Enable Institution Minimum Month Refinance Check")]
+        public void ThenClickOnEnableInstitutionMinimumMonthRefinanceCheck()
+        {
+            _bSPageObject.InstitutionMinimumMonthRefinance();
+        }
 
     }
 }
