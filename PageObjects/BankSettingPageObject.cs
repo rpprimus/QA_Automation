@@ -61,8 +61,24 @@ namespace Affordit_Automation.PageObjects
         public By Miscsetting => ByLocator("//a[contains(text(),'Miscellaneous Settings')]");
         public By remainloantermref => ByLocator("//span[contains(text(),'Enable Remaining Loan Term Refinance Check')]");
         public By instminmonthref => ByLocator("//span[contains(text(), 'Enable Institution Minimum Month Refinance Check')]");
+        public By homepagelink => ByLocator("//a[contains(text(),'Home')]");
+        public By search => ByLocator("//div//input[@data-placeholder='Search Here']");
+        public By resultdata => ByLocator("//tbody/tr/td[contains(text(),'Jay')]");
         public BankSettingPageObject(IWebDriver driver) : base(driver)
         {
+        }
+        public void GetResult()
+        {
+            Click(resultdata);
+        }
+        public void HomePage()
+        {
+            Click(homepagelink);
+        }
+        public void SearchApplicant()
+        {
+            SendKeys(search, "7350", true);
+            AutoItX.Send("{ENTER}");
         }
         public void MiscSettingLink()
         {
