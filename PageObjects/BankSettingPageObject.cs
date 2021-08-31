@@ -58,43 +58,13 @@ namespace Affordit_Automation.PageObjects
         public By borroweloangroupappriasal => ByLocator("/html/body/app-root/app-private-layout/app-manage/div/div/div/app-liability-appraisal/div[2]/mat-form-field/div/div[1]/div/mat-select/div/div[1]");
         public By refinacesavebtn => ByLocator("(//button[contains(text(),'Save Refinance Options')])[1]");
         public By savesettings => ByLocator("//button[contains(text(),'Save Settings')]");
-        public By Miscsetting => ByLocator("//a[contains(text(),'Miscellaneous Settings')]");
-        public By remainloantermref => ByLocator("//span[contains(text(),'Enable Remaining Loan Term Refinance Check')]");
-        public By instminmonthref => ByLocator("//span[contains(text(), 'Enable Institution Minimum Month Refinance Check')]");
-        public By homepagelink => ByLocator("//a[contains(text(),'Home')]");
-        public By search => ByLocator("//div//input[@data-placeholder='Search Here']");
-        public By resultdata => ByLocator("//tbody/tr/td[contains(text(),'Jay')]");
         public BankSettingPageObject(IWebDriver driver) : base(driver)
         {
-        }
-        public void GetResult()
-        {
-            Click(resultdata);
-        }
-        public void HomePage()
-        {
-            Click(homepagelink);
-        }
-        public void SearchApplicant()
-        {
-            SendKeys(search, "7350", true);
-            AutoItX.Send("{ENTER}");
-        }
-        public void MiscSettingLink()
-        {
-            Click(Miscsetting);
-        }
-        public void RemainingLoanTermRefinance()
-        {
-            Click(remainloantermref);
-        }
-        public void InstitutionMinimumMonthRefinance()
-        {
-            Click(instminmonthref);
         }
         public By Purpose(string purpose)
         {
             return ByLocator($"//div//span[contains(text(),'{purpose}')]");
+
         }
         public By LoanGroupOption()
         {
