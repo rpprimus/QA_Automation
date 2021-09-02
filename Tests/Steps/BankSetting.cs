@@ -283,9 +283,9 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Click on Enable Adjustable DTI Threshold")]
         public void ThenClickOnEnableAdjustableDTIThreshold()
         {
-            Thread.Sleep(5000);
+          //  Thread.Sleep(5000);
             _bSPageObject.EnableAdjustableDTIThreshold();
-            Thread.Sleep(5000);
+           // Thread.Sleep(5000);
         }
        
         [Then(@"Goto Home Link")]
