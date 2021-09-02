@@ -85,7 +85,11 @@ namespace Affordit_Automation.PageObjects
         }
         public void EnableAdjustableDTIThreshold()
         {
-            Click(DTIThreshlod);
+            if (!IsElementPresent(By.XPath("//mat-checkbox[@class='mat-checkbox mat-accent ng-valid ng-dirty ng-touched mat-checkbox-checked']")))
+              {
+                
+                Click(DTIThreshlod);
+            }
         }
         public By Purpose(string purpose)
         {

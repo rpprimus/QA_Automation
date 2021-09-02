@@ -120,7 +120,7 @@ namespace Affordit_Automation.Utils
 		}
 
 		//Verify element is present or not
-		public bool IsElementPresent(By locator, int timeout = 3)
+		public bool IsElementPresent(By locator, int timeout = 5)
 		{
 			return FindElement(locator, SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists, timeout, false) != null;
 		}

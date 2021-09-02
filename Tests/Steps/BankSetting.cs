@@ -273,7 +273,12 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Click on Save Setting")]
         public void ThenClickOnSaveSetting()
         {
-            _bSPageObject.SaveSetting();
+            IWebElement e1 = _driver.FindElement(By.XPath("//button[contains(text(),'Save Settings')]"));
+            if (e1.Enabled)
+            {
+                _bSPageObject.SaveSetting();
+               
+            } 
         }
         [Then(@"Click on Miscellaneous Settings")]
         public void ThenClickOnMiscellaneousSettings()
@@ -283,9 +288,8 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Click on Enable Adjustable DTI Threshold")]
         public void ThenClickOnEnableAdjustableDTIThreshold()
         {
-          //  Thread.Sleep(5000);
-            _bSPageObject.EnableAdjustableDTIThreshold();
-           // Thread.Sleep(5000);
+            
+                _bSPageObject.EnableAdjustableDTIThreshold();
         }
        
         [Then(@"Goto Home Link")]
