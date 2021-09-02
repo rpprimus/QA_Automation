@@ -84,12 +84,14 @@ namespace Affordit_Automation.PageObjects
         {
             Click(Miscsetting);
         }
-        public void RemainingLoanTermRefinance()
+        public void EnableAdjustableDTIThreshold()
         {
+            
             Click(enabledti);
         }
         public void InstitutionMinimumMonthRefinance()
         {
+           
             Click(instminmonthref);
         }
         public By Purpose(string purpose)

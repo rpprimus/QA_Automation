@@ -284,8 +284,10 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Enable Adjustable DTI Threshold")]
         public void ThenEnableAdjustableDTIThreshold()
         {
-            _bSPageObject.RemainingLoanTermRefinance();
-            
+           
+            _bSPageObject.EnableAdjustableDTIThreshold();
+           // Thread.Sleep(5000);
+
         }
         [Then(@"Goto Home Link")]
         public void ThenGotoHomeLink()
