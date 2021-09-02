@@ -275,6 +275,33 @@ namespace Affordit_Automation.Tests.Steps
         {
             _bSPageObject.SaveSetting();
         }
-
+        [Then(@"Click on Miscellaneous Settings")]
+        public void ThenClickOnMiscellaneousSettings()
+        {
+            _bSPageObject.MiscSettingLink();
+        }
+        [Then(@"Click on Enable Adjustable DTI Threshold")]
+        public void ThenClickOnEnableAdjustableDTIThreshold()
+        {
+            Thread.Sleep(5000);
+            _bSPageObject.EnableAdjustableDTIThreshold();
+            Thread.Sleep(5000);
+        }
+       
+        [Then(@"Goto Home Link")]
+        public void ThenGotoHomeLink()
+        {
+            _bSPageObject.HomePage();
+        }
+        [Then(@"Enter AffordIt ID to Search")]
+        public void ThenEnterAffordItIDToSearch()
+        {
+            _bSPageObject.SearchApplicant();
+        }
+        [Then(@"Click on the Data to See Effect on SBO Report")]
+        public void ThenClickOnTheDataToSeeEffectOnSBOReport()
+        {
+            _bSPageObject.GetResult();
+        }
     }
 }
