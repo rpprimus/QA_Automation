@@ -59,7 +59,7 @@ namespace Affordit_Automation.PageObjects
         public By refinacesavebtn => ByLocator("(//button[contains(text(),'Save Refinance Options')])[1]");
         public By savesettings => ByLocator("//button[contains(text(),'Save Settings')]");
         public By Miscsetting => ByLocator("//a[contains(text(),'Miscellaneous Settings')]");
-        public By remainloantermref => ByLocator("//span[contains(text(),'Enable Remaining Loan Term Refinance Check')]");
+        public By enabledti => ByLocator("/html/body/app-root/app-private-layout/app-manage/div/div/div/app-misc-settings/div/div/form/div[4]/div[2]/table/tr/td/mat-checkbox/label/span[1]");
         public By instminmonthref => ByLocator("//span[contains(text(), 'Enable Institution Minimum Month Refinance Check')]");
         public By homepagelink => ByLocator("//a[contains(text(),'Home')]");
         public By search => ByLocator("//div//input[@data-placeholder='Search Here']");
@@ -86,7 +86,7 @@ namespace Affordit_Automation.PageObjects
         }
         public void RemainingLoanTermRefinance()
         {
-            Click(remainloantermref);
+            Click(enabledti);
         }
         public void InstitutionMinimumMonthRefinance()
         {

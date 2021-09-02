@@ -278,17 +278,14 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Click on Miscellaneous Settings")]
         public void ThenClickOnMiscellaneousSettings()
         {
+           
             _bSPageObject.MiscSettingLink();
         }
-        [Then(@"Click on Enable Remaining Loan Term Refinance Check")]
-        public void ThenClickOnEnableRemainingLoanTermRefinanceCheck()
+        [Then(@"Enable Adjustable DTI Threshold")]
+        public void ThenEnableAdjustableDTIThreshold()
         {
             _bSPageObject.RemainingLoanTermRefinance();
-        }
-        [Then(@"Click on Enable Institution Minimum Month Refinance Check")]
-        public void ThenClickOnEnableInstitutionMinimumMonthRefinanceCheck()
-        {
-            _bSPageObject.InstitutionMinimumMonthRefinance();
+            
         }
         [Then(@"Goto Home Link")]
         public void ThenGotoHomeLink()
