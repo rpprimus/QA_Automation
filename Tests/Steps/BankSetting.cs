@@ -2,6 +2,7 @@
 using Affordit_Automation.Utils;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
+using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,12 +19,14 @@ namespace Affordit_Automation.Tests.Steps
         protected readonly PropertyReader _propertyReader;
         protected readonly BankSettingPageObject _bSPageObject;
        public Actions act;
+        WebDriverWait wait;
         public BankSetting(IWebDriver driver)
         {
             _driver = driver;
             _propertyReader = PropertyReader.Instance;
             _bSPageObject = new BankSettingPageObject(_driver);
             act = new Actions(_driver);
+            wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(35));
         }
         [When(@"Click on Hamburger Menu")]
         public void WhenClickOnHamberberMenu()
@@ -273,8 +276,54 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Click on Save Setting")]
         public void ThenClickOnSaveSetting()
         {
-            _bSPageObject.SaveSetting();
+            IWebElement e1 = _driver.FindElement(By.XPath("//button[contains(text(),'Save Settings')]"));
+            if (e1.Enabled)
+            {
+                _bSPageObject.SaveSetting();
+                Console.WriteLine("Code Is Working");
+            }
+            else
+            {
+                Console.WriteLine("Element Not Enabled");
+            }
+        }
+        [Then(@"Click on Save Setting button")]
+        public void ThenClickOnSaveSettingButton()
+        {          
+            IWebElement btnsave = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("//button[contains(text(),'Save Settings')]")));
+            IJavaScriptExecutor ex = (IJavaScriptExecutor)_driver;
+            ex.ExecuteScript("arguments[0].click();", btnsave);         
         }
 
+        [Then(@"Click on Miscellaneous Settings")]
+        public void ThenClickOnMiscellaneousSettings()
+        {
+            _bSPageObject.MiscSettingLink();
+        }
+        [Then(@"Click on Enable Adjustable DTI Threshold")]
+        public void ThenClickOnEnableAdjustableDTIThreshold()
+        {          
+            _bSPageObject.EnableAdjustableDTIThreshold();
+        }
+        [Then(@"Check Whether DTI Threshold Presence")]
+        public void ThenCheckWhetherDTIThresholdPresence()
+        {
+            _bSPageObject.DTIThresholdPresence();
+        }
+        [Then(@"Goto Home Link")]
+        public void ThenGotoHomeLink()
+        {
+            _bSPageObject.HomePage();
+        }
+        [Then(@"Enter AffordIt ID to Search")]
+        public void ThenEnterAffordItIDToSearch()
+        {
+            _bSPageObject.SearchApplicant();
+        }
+        [Then(@"Click on the Data to See Effect on SBO Report")]
+        public void ThenClickOnTheDataToSeeEffectOnSBOReport()
+        {
+            _bSPageObject.GetResult();
+        }
     }
 }

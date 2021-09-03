@@ -112,3 +112,27 @@ Scenario: Scenario_14_Liability Appraisal PRIM-265
 	Then Select an Option from the List for Liability Appraisal
 	Then Click on Use liability balance as appraisal value if an appraisal value cannot be determined
 	Then Click on Save Setting
+Scenario: Scenario_15_Miscellaneous Settings PRIM-266 Part - 1
+	Given Navigate to New Application Page with "CorrectUsername" and "CorrectPassword" 
+	And Select "Meridian Test (MER)" tenant
+	When Click on Hamburger Menu 
+	Then Click on Bank Setting
+	Then Click on Miscellaneous Settings
+	Then Click on Enable Adjustable DTI Threshold
+	Then Click on Save Setting button
+	Then Goto Home Link
+	Then Enter AffordIt ID to Search
+	Then Click on the Data to See Effect on SBO Report
+	Then Check Whether DTI Threshold Presence
+Scenario: Scenario_16_Miscellaneous Settings PRIM-266 Part - 2
+	#Given Navigate to New Application Page with "CorrectUsername" and "CorrectPassword" 
+	#And Select "Meridian Test (MER)" tenant
+	When Click on Hamburger Menu 
+	Then Click on Bank Setting
+	Then Click on Miscellaneous Settings
+	Then Click on Enable Adjustable DTI Threshold
+	Then Click on Save Setting button
+	Then Goto Home Link
+	Then Enter AffordIt ID to Search
+	Then Click on the Data to See Effect on SBO Report
+	Then Check Whether DTI Threshold Presence
