@@ -1,6 +1,7 @@
 ﻿using Affordit_Automation.Utils;
 using AutoIt;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -59,10 +60,11 @@ namespace Affordit_Automation.PageObjects
         public By refinacesavebtn => ByLocator("(//button[contains(text(),'Save Refinance Options')])[1]");
         public By savesettings => ByLocator("//button[contains(text(),'Save Settings')]");
         public By Miscsetting => ByLocator("//a[contains(text(),'Miscellaneous Settings')]");
-        public By DTIThreshlod => ByLocator("/html/body/app-root/app-private-layout/app-manage/div/div/div/app-misc-settings/div/div/form/div[4]/div[2]/table/tr/td/mat-checkbox/label");
+        public By DTIThreshlod => ByLocator("//span[contains(text(),'Enable Adjustable DTI Threshold')]");
         public By homepagelink => ByLocator("//a[contains(text(),'Home')]");
         public By search => ByLocator("//div//input[@data-placeholder='Search Here']");
         public By resultdata => ByLocator("//tbody/tr/td[contains(text(),'Jay')]");
+        public By savebtn => ByLocator("/html/body/app-root/app-private-layout/app-manage/div/div/div/app-misc-settings/div/div/form/div[1]/button");
         public BankSettingPageObject(IWebDriver driver) : base(driver)
         {
         }
@@ -84,12 +86,25 @@ namespace Affordit_Automation.PageObjects
             Click(Miscsetting);
         }
         public void EnableAdjustableDTIThreshold()
-        {
-            if (!IsElementPresent(By.XPath("//mat-checkbox[@class='mat-checkbox mat-accent ng-valid ng-dirty ng-touched mat-checkbox-checked']")))
-              {
-                
+        {           
                 Click(DTIThreshlod);
+        }
+        public void DTIThresholdPresence()
+        {
+            if (!IsElementPresent(By.XPath("//div//h4[contains(text(),'Adjust DTI Threshold')]")))
+            {
+                Console.WriteLine("DTI Threshold Not Present");
+                Thread.Sleep(3000);// just to see result
             }
+            else
+            {
+                Console.WriteLine("DTI Threshold Present");
+                Thread.Sleep(3000);//just to see the result
+            }
+        }
+        public void SaveSettingBtn()
+        {
+            Click(savebtn);
         }
         public By Purpose(string purpose)
         {
