@@ -1096,7 +1096,7 @@
           "lib/net45/WebDriver.dll": {}
         }
       },
-      "Selenium.WebDriver.ChromeDriver/91.0.4472.10100": {
+      "Selenium.WebDriver.ChromeDriver/93.0.4577.1500": {
         "type": "package",
         "build": {
           "build/Selenium.WebDriver.ChromeDriver.targets": {}
@@ -3376,10 +3376,10 @@
         "selenium.webdriver.nuspec"
       ]
     },
-    "Selenium.WebDriver.ChromeDriver/91.0.4472.10100": {
-      "sha512": "RalhItuJ6BZdD9HHVUHdpgDP/NQAUrr1yEAHWet+Ww33wbcuei0A2sF4+9duKaLQuZO3lcid7pKe2+km3sOGBQ==",
+    "Selenium.WebDriver.ChromeDriver/93.0.4577.1500": {
+      "sha512": "Jmu4HRq6NTdPbBtXlMUlmB9HIyB03MEcZWSJNSxGykNY10cOhAE5LpIm3hHF+/rw+dgaZPxU8SLkd85xtsS7/A==",
       "type": "package",
-      "path": "selenium.webdriver.chromedriver/91.0.4472.10100",
+      "path": "selenium.webdriver.chromedriver/93.0.4577.1500",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3390,7 +3390,7 @@
         "driver/mac64/chromedriver",
         "driver/win32/chromedriver.exe",
         "nupkg-icon.png",
-        "selenium.webdriver.chromedriver.91.0.4472.10100.nupkg.sha512",
+        "selenium.webdriver.chromedriver.93.0.4577.1500.nupkg.sha512",
         "selenium.webdriver.chromedriver.nuspec"
       ]
     },
@@ -6664,7 +6664,7 @@
       "Microsoft.NET.Test.Sdk >= 16.5.0",
       "Selenium.Support >= 3.141.0",
       "Selenium.WebDriver >= 3.141.0",
-      "Selenium.WebDriver.ChromeDriver >= 91.0.4472.10100",
+      "Selenium.WebDriver.ChromeDriver >= 93.0.4577.1500",
       "SpecFlow.MsTest >= 3.9.8",
       "SpecFlow.Plus.LivingDocPlugin >= 3.9.5",
       "Validation >= 2.5.42"
@@ -6745,7 +6745,7 @@
           },
           "Selenium.WebDriver.ChromeDriver": {
             "target": "Package",
-            "version": "[91.0.4472.10100, )"
+            "version": "[93.0.4577.1500, )"
           },
           "SpecFlow.MsTest": {
             "target": "Package",

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "hyhKge68w9mMsuvVNjcHOk919HCAPkbkI9XuLqx1VYxNNM216aBoMvm7MHOfAVo2sWrI2GMKVKHKHAGIVy7jMg==",
+  "dgSpecHash": "fcGWvkLeITNVILZXku09HS8aCMfw5TpKax8gKAAp6tGKPkHmpG5OKMGE82fyHF7A3wpxh87aPUuIlcQaQAyE9Q==",
   "success": true,
   "projectFilePath": "C:\\Primus\\Affordit_Automation\\Affordit_Automation.csproj",
   "expectedPackageFiles": [
@@ -83,7 +83,7 @@
     "C:\\Users\\ROSHAN\\.nuget\\packages\\razorengine.netcore\\2.2.6\\razorengine.netcore.2.2.6.nupkg.sha512",
     "C:\\Users\\ROSHAN\\.nuget\\packages\\selenium.support\\3.141.0\\selenium.support.3.141.0.nupkg.sha512",
     "C:\\Users\\ROSHAN\\.nuget\\packages\\selenium.webdriver\\3.141.0\\selenium.webdriver.3.141.0.nupkg.sha512",
-    "C:\\Users\\ROSHAN\\.nuget\\packages\\selenium.webdriver.chromedriver\\91.0.4472.10100\\selenium.webdriver.chromedriver.91.0.4472.10100.nupkg.sha512",
+    "C:\\Users\\ROSHAN\\.nuget\\packages\\selenium.webdriver.chromedriver\\93.0.4577.1500\\selenium.webdriver.chromedriver.93.0.4577.1500.nupkg.sha512",
     "C:\\Users\\ROSHAN\\.nuget\\packages\\sharpcompress\\0.23.0\\sharpcompress.0.23.0.nupkg.sha512",
     "C:\\Users\\ROSHAN\\.nuget\\packages\\snappy.net\\1.1.1.8\\snappy.net.1.1.1.8.nupkg.sha512",
     "C:\\Users\\ROSHAN\\.nuget\\packages\\specflow\\3.9.8\\specflow.3.9.8.nupkg.sha512",
