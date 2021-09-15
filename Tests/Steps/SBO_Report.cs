@@ -23,6 +23,7 @@ namespace Affordit_Automation.Tests.Steps
         public IncomeAndAssetsPrimaryPageObject _AL1PageObjects = null;
         public SBOReportPageObjects _sbo = null;
         WebDriverWait wait;
+        public IJavaScriptExecutor exec;
         public SBO_Report(IWebDriver driver)
         {
             _driver = driver;
@@ -32,6 +33,7 @@ namespace Affordit_Automation.Tests.Steps
             _sbo = new SBOReportPageObjects(_driver);
             act = new Actions(_driver);
             wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(100));
+            exec = (IJavaScriptExecutor)_driver;
         }
         [Then(@"Click on Next Icon For Loan Type")]
         public void ThenClickOnNextIconForLoanType()
@@ -394,16 +396,7 @@ namespace Affordit_Automation.Tests.Steps
         {
             _sbo.EnterInterestRate();
         }
-        //[Then(@"Check the Special Interest Checkbox")]
-        //public void ThenCheckTheSpecialInterestCheckbox()
-        //{
-        //    _sbo.SpecialInterestRate();
-        //}
-        //[Then(@"Enter Special Interest Rate")]
-        //public void ThenEnterSpecialInterestRate()
-        //{
-        //    _sbo.SpecailInterestRateField();
-        //}
+
 
         [Then(@"Enter Year")]
         public void ThenEnterYear()
@@ -424,10 +417,11 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Enter Model")]
         public void ThenEnterModel()
         {
-            IWebElement ClickOnModel = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[4]/div[5]/div[2]/div[3]/ng-select/div/span")));
-            ClickOnModel.Click();
-            IWebElement SelectModal = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[3]")));
-            SelectModal.Click();
+            Actions action = new Actions(_driver);
+            IWebElement ClickOnModel = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("//*[@id='cdk-step-content-0-5']/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[4]/div[5]/div[2]/div[3]/ng-select/div/div/div[2]/input")));
+            action.MoveToElement(ClickOnModel).Click().Perform();
+            IWebElement SelectModal = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[5]")));
+            exec.ExecuteScript("arguments[0].click();", SelectModal);
         }
         [Then(@"Select Body")]
         public void ThenSelectBody()

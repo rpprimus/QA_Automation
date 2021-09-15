@@ -193,7 +193,7 @@ namespace Affordit_Automation.PageObjects
         }
         public void ClickOnLiabilityButton()
         {
-            Click(liabilityBtn);
+            ClickByJS(liabilityBtn);
         }
         public void ClickOnLiblityDropdown()
         {
