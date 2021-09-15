@@ -57,7 +57,7 @@ namespace Affordit_Automation.PageObjects
 
 		public void ClickMenuIcon()
 		{
-			Click(MenuIconButton);
+			ClickByJS(MenuIconButton);
 		}
 		public void ClickonSecuritySettings()
 		{
@@ -135,7 +135,7 @@ namespace Affordit_Automation.PageObjects
 		}
 		public void ClickSaveTenantButton()
 		{
-			Click(SaveTenantButton);
+			ClickByJS(SaveTenantButton);
 
 		}
 		public void ClickOnUsersTab()

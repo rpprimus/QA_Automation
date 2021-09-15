@@ -66,8 +66,8 @@ namespace Affordit_Automation.PageObjects
         }
         public void EnterEmailIdInSearchBoxAndSelectIt()
         {
-            SendKeys(EnterEmailId, "niruti", true);
-            Click(SelectIt);
+            SendKeys(EnterEmailId, "jai", true);
+            ClickByJS(SelectIt);
         }
         public void ClickSettingsTab()
         {
@@ -75,8 +75,8 @@ namespace Affordit_Automation.PageObjects
         }
         public void ClickSaveAndSubmitButtonForTieredPricing()
         {
-            Click(AdditionalSetting);
-            Click(SaveAndSubmitButtonForTieredPricing);
+            ClickByJS(AdditionalSetting);
+            ClickByJS(SaveAndSubmitButtonForTieredPricing);
         }
         public void ClickSaveSettings()
         {

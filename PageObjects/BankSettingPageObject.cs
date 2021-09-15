@@ -65,6 +65,7 @@ namespace Affordit_Automation.PageObjects
         public By search => ByLocator("//div//input[@data-placeholder='Search Here']");
         public By resultdata => ByLocator("//tbody/tr/td[contains(text(),'Jay')]");
         public By savebtn => ByLocator("/html/body/app-root/app-private-layout/app-manage/div/div/div/app-misc-settings/div/div/form/div[1]/button");
+        protected static readonly PropertyReader _propertyReader = PropertyReader.Instance;
         public BankSettingPageObject(IWebDriver driver) : base(driver)
         {
         }
@@ -118,7 +119,7 @@ namespace Affordit_Automation.PageObjects
         public void HamMenu()
         {
             
-            Click(hammenu);
+            ClickByJS(hammenu);
         }
         public void BankSetting()
         {
@@ -151,7 +152,7 @@ namespace Affordit_Automation.PageObjects
         }
         public void Save_And_Submitbtn()
         {
-            Click(savesubmitbtnfinance);
+            ClickByJS(savesubmitbtnfinance);
         }
         public void Refinance()
         {
@@ -200,7 +201,7 @@ namespace Affordit_Automation.PageObjects
         public void ToggleLoangroup()
         {
          //  Thread.Sleep(5000);
-            Click(heloan);
+            ClickByJS(heloan);
            //Thread.Sleep(5000);
         }
         public void TenantFiles()
@@ -221,11 +222,11 @@ namespace Affordit_Automation.PageObjects
         }
         public void UploadFile()
         {
-            string path = @"C:\title-logo.png";
+            string path = @"\ExtentReport\title-logo.png";
             Click(selectfile);
             // AutoItX auto = new AutoItX();
             AutoItX.WinActivate("Open");
-            AutoItX.Send(path);
+            AutoItX.Send(_propertyReader.GetPath() + path);
             //Thread.Sleep(1000);
             AutoItX.Send("{ENTER}");
            // Thread.Sleep(1000);
@@ -293,17 +294,17 @@ namespace Affordit_Automation.PageObjects
         public void ClickOnNewMortage()
         {
            //Thread.Sleep(5000);
-            Click(refinanceloantype);
+            ClickByJS(refinanceloantype);
         }
         public void SelectLoanTypeForRefinance()
         {
            // Thread.Sleep(5000);
-            Click(mortgage20);
+            ClickByJS(mortgage20);
         }
         public void SaveRefinaceOption()
         {
           // Thread.Sleep(5000); // without thread it my show some error
-            Click(refinacesavebtn);
+            ClickByJS(refinacesavebtn);
         }
         public void LiabilityAppraisal()
         {
@@ -317,7 +318,7 @@ namespace Affordit_Automation.PageObjects
         public void SelectOnDropdownItem()
         {
            // Thread.Sleep(1000);
-            Click(usedautoliability);
+            ClickByJS(usedautoliability);
             // AutoIt a = new AutoIt();
             AutoItX.Send("{ESC}");
 

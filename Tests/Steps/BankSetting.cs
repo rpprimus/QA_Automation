@@ -243,7 +243,7 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Select an Option from the List")]
         public void ThenSelectAnOptionFromTheList()
         {
-            _bSPageObject.SelectLoanTypeForRefinance();
+           // _bSPageObject.SelectLoanTypeForRefinance();
         }
         [Then(@"Click on Save Refinance Option")]
         public void ThenClickOnSaveRefinanceOption()

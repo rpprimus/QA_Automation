@@ -113,8 +113,8 @@ Scenario: Scenario_14_Liability Appraisal PRIM-265
 	Then Click on Use liability balance as appraisal value if an appraisal value cannot be determined
 	Then Click on Save Setting
 Scenario: Scenario_15_Miscellaneous Settings PRIM-266 Part - 1
-	Given Navigate to New Application Page with "CorrectUsername" and "CorrectPassword" 
-	And Select "Meridian Test (MER)" tenant
+	#Given Navigate to New Application Page with "CorrectUsername" and "CorrectPassword" 
+	#And Select "Meridian Test (MER)" tenant
 	When Click on Hamburger Menu 
 	Then Click on Bank Setting
 	Then Click on Miscellaneous Settings

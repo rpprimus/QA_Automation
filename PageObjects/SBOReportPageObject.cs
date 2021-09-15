@@ -7,7 +7,7 @@ namespace Affordit_Automation.PageObjects
     {
         public readonly PropertyReader _propertyReader = PropertyReader.Instance;
         public By NextbtnforLoantypepage => ByLocator("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[1]/app-credit-record/div/div[2]/div/a[2]");
-        public By MORTGAGEIcon => ByLocator("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[2]/app-loan-type/div/div[2]/form/div[1]/div/div/div[1]/div[2]/div[1]");
+        public By MORTGAGEIcon => ByLocator("//div//label[text()='MORTGAGE']");
         public By LoanRequestForMORTGAGE => ByLocator("html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[2]/app-loan-type/div/div[2]/form/div[2]/div[1]/ng-select/div/div/div[2]/input");
         public By LoanSubtastRequest => ByLocator("/html/body/ng-dropdown-panel/div/div[2]/div[2]");
         public By PurchasePrice => ByLocator("//input[@name='purchasePrice']");
@@ -69,7 +69,7 @@ namespace Affordit_Automation.PageObjects
         }
         public void ClickMortgageIcon()
         {
-            Click(MORTGAGEIcon);
+            ClickByJS(MORTGAGEIcon);
         }
         public void ClickOnTypeOfLoanRequest()
         {
@@ -271,7 +271,7 @@ namespace Affordit_Automation.PageObjects
         }
         public void PersonalLoanIcon()
         {
-            Click(PersonalIcon);
+            ClickByJS(PersonalIcon);
         }
         public void PersonalLoanAmount()
         {

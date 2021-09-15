@@ -151,8 +151,11 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Enter CoBorrower Date of Birth")]
         public void ThenEnterCoBorrowerDateOfBirth()
         {
-            IWebElement CoBorrowerDateOfBirth = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[3]/app-personal-information/div/div[2]/form/div[3]/div[1]/div[6]/mat-form-field")));
+            IWebElement CoBorrowerDateOfBirth = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("//input[@name='coBorrowerDateOfBirth']")));
             CoBorrowerDateOfBirth.Click();
+            IWebElement prelink= wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("//button[@aria-label='Previous month']")));
+            prelink.Click();
+            Console.WriteLine("It is WOrking here");
             IWebElement Select = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/div[3]/div[2]/div/mat-datepicker-content/div[2]/mat-calendar/div/mat-month-view/table/tbody/tr[1]/td[2]/div[1]")));
             Select.Click();
         }
