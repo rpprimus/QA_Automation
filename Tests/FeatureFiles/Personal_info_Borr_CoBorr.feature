@@ -5,7 +5,7 @@ Background:
 
 Scenario: Scenario_01_Add Personal Information of Borrower and CoBorrower PRIM-196
 	And Navigate to New Application Page with "CorrectUsername" and "CorrectPassword" 
-	And Select "Meridian Test (MER)" tenent
+	And Select "Meridian Test (MER)" tenant
 	And Click on New Application Button
 	Then Select Yes button
 	Then Click on personal information
@@ -28,7 +28,7 @@ Scenario: Scenario_01_Add Personal Information of Borrower and CoBorrower PRIM-1
 	Then Enter CoBorrower Address line one
 	Then Enter CoBorrower Address line two
 	Then Enter CoBorrower City
-	Then Select CoBorrower State
+	#Then Select CoBorrower State
 	Then Enter CoBorrower ZipCode
 	Then Click on Next link for Co-Borrower details
 

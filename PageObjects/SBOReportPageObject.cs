@@ -189,11 +189,11 @@ namespace Affordit_Automation.PageObjects
         }
         public void ClickOnNextbtnForLiabilites()
         {
-            Click(nextbtnLiabilites);
+            ClickByJS(nextbtnLiabilites);
         }
         public void ClickOnLiabilityButton()
         {
-            Click(liabilityBtn);
+            ClickByJS(liabilityBtn);
         }
         public void ClickOnLiblityDropdown()
         {
@@ -209,15 +209,15 @@ namespace Affordit_Automation.PageObjects
         }
         public void SelectLiability()
         {
-            Click(LiabitityOption);
+            ClickByJS(LiabitityOption);
         }
         public void SelectLiabilityCreditCard1()
         {
-            Click(LiabilityOptionCreditCard1);
+            ClickByJS(LiabilityOptionCreditCard1);
         }
         public void SelectLiabilityCreditCard2()
         {
-            Click(LiabilityOptionCreditCard2);
+            ClickByJS(LiabilityOptionCreditCard2);
         }
         public void EnterBalanceAmtforLiability()
         {
@@ -225,7 +225,7 @@ namespace Affordit_Automation.PageObjects
         }
         public void ClickOnDropdownIcon()
         {
-            Click(dropdownIcon);
+            ClickByJS(dropdownIcon);
         }
         public void EnterOrignalLoanAmount()
         {
@@ -271,7 +271,7 @@ namespace Affordit_Automation.PageObjects
         }
         public void PersonalLoanIcon()
         {
-            Click(PersonalIcon);
+            ClickByJS(PersonalIcon);
         }
         public void PersonalLoanAmount()
         {

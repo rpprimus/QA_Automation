@@ -6,7 +6,7 @@ Background:
 
 Scenario: 1 Add Employment Details of Borrower and  CoBorrower (PRIM-198)
 	Given Navigate to New Application Page with "CorrectUsername" and "CorrectPassword" 
-	And Select "Meridian Test (MER)" tenent
+	And Select "Meridian Test (MER)" tenant
 	And Click on New Application Button
 	Then Select Yes button
 	Then Click on Employment Button

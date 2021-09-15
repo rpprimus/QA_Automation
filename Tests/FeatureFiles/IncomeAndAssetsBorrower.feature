@@ -2,7 +2,7 @@
 @Regression
 Scenario: Scenario_01_Entering Annual Base Income of Borrower and Asset Type Cash Deposit (PRIM-181)
 	Given Navigate to New Application Page with "CorrectUsername" and "CorrectPassword" 
-	And Select "Meridian Test (MER)" tenent
+	And Select "Meridian Test (MER)" tenant
 	And Click on New Application Button
 	When Click on Income and Assets Link
 	And Enter Data in "AnnualBaseIncome"

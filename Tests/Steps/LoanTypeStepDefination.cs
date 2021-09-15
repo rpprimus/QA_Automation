@@ -56,8 +56,10 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Click HOME EQUITY Icon")]
         public void ThenClickHOMEEQUITYIcon()
         {
-            IWebElement HOMEEQUITYIcon = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[2]/app-loan-type/div/div[2]/form/div[1]/div/div/div[1]/div[2]/div[2]")));
-            HOMEEQUITYIcon.Click();
+            IWebElement HOMEEQUITYIcon = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("//div//label[text()='HOME EQUITY']")));
+            //HOMEEQUITYIcon.Click();
+            IJavaScriptExecutor executor = (IJavaScriptExecutor)_driver;
+            executor.ExecuteScript("arguments[0].click();", HOMEEQUITYIcon);
         }
         [Then(@"Select Type of Loan Request for HOME EQUITY")]
         public void ThenSelectTypeOfLoanRequestForHOMEEQUITY()
@@ -102,7 +104,8 @@ namespace Affordit_Automation.Tests.Steps
         public void ThenClickAUTOIcon()
         {
             IWebElement AUTOIcon = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("//div/label[text()='AUTO']")));
-            AUTOIcon.Click();
+            IJavaScriptExecutor executor = (IJavaScriptExecutor)_driver;
+            executor.ExecuteScript("arguments[0].click();", AUTOIcon);
         }
         [Then(@"Select Type of Loan Request for AUTO")]
         public void ThenSelectTypeOfLoanRequestForAUTO()
@@ -130,8 +133,9 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Click MoTORCYCLE Icon")]
         public void ThenClickMoTORCYCLEIcon()
         {
-            IWebElement MoTORCYCLEIcon = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[2]/app-loan-type/div/div[2]/form/div[1]/div/div/div[1]/div[3]/div[2]")));
-            MoTORCYCLEIcon.Click();
+            IWebElement MOTORCYCLEIcon = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("//div//label[text()='MOTORCYCLE']")));
+            IJavaScriptExecutor executor = (IJavaScriptExecutor)_driver;
+            executor.ExecuteScript("arguments[0].click();",MOTORCYCLEIcon);
         }
 
         [Then(@"Select Type of Loan Request for MoTORCYCLE")]
@@ -160,8 +164,9 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Click BOAT Icon")]
         public void ThenClickBOATIcon()
         {
-            IWebElement BOATIcon = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[2]/app-loan-type/div/div[2]/form/div[1]/div/div/div[1]/div[3]/div[3]")));
-            BOATIcon.Click();
+            IWebElement BOATIcon = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("//div//label[text()='BOAT']")));
+            IJavaScriptExecutor executor = (IJavaScriptExecutor)_driver;
+            executor.ExecuteScript("arguments[0].click();", BOATIcon);
         }
         [Then(@"Select Type of Loan Request for BOAT")]
         public void ThenSelectTypeOfLoanRequestForBOAT()
@@ -190,8 +195,9 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Click RV/ATV Icon")]
         public void ThenClickRVATVIcon()
         {
-            IWebElement RVATVIcon = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[2]/app-loan-type/div/div[2]/form/div[1]/div/div/div[1]/div[3]/div[4]")));
-            RVATVIcon.Click();
+            IWebElement RVATVIcon = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("//div//label[text()='RV / ATV']")));
+            IJavaScriptExecutor executor = (IJavaScriptExecutor)_driver;
+            executor.ExecuteScript("arguments[0].click();", RVATVIcon);
         }
         [Then(@"Select Type of Loan Request for RV/ATV")]
         public void ThenSelectTypeOfLoanRequestForRVATV()

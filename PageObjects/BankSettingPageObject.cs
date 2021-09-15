@@ -138,7 +138,7 @@ namespace Affordit_Automation.PageObjects
         }
         public void Save_And_Submitbtn()
         {
-            Click(savesubmitbtnfinance);
+            ClickByJS(savesubmitbtnfinance);
         }
         public void Refinance()
         {
@@ -187,7 +187,7 @@ namespace Affordit_Automation.PageObjects
         public void ToggleLoangroup()
         {
          //  Thread.Sleep(5000);
-            Click(heloan);
+            ClickByJS(heloan);
            //Thread.Sleep(5000);
         }
         public void TenantFiles()
@@ -280,17 +280,17 @@ namespace Affordit_Automation.PageObjects
         public void ClickOnNewMortage()
         {
            //Thread.Sleep(5000);
-            Click(refinanceloantype);
+            ClickByJS(refinanceloantype);
         }
         public void SelectLoanTypeForRefinance()
         {
            // Thread.Sleep(5000);
-            Click(mortgage20);
+            ClickByJS(mortgage20);
         }
         public void SaveRefinaceOption()
         {
           // Thread.Sleep(5000); // without thread it my show some error
-            Click(refinacesavebtn);
+            ClickByJS(refinacesavebtn);
         }
         public void LiabilityAppraisal()
         {
@@ -304,7 +304,7 @@ namespace Affordit_Automation.PageObjects
         public void SelectOnDropdownItem()
         {
            // Thread.Sleep(1000);
-            Click(usedautoliability);
+            ClickByJS(usedautoliability);
             // AutoIt a = new AutoIt();
             AutoItX.Send("{ESC}");
 
@@ -312,11 +312,11 @@ namespace Affordit_Automation.PageObjects
         public void ClickonLiabilityBalance()
         {
           //  Thread.Sleep(1000);
-            Click(usedLiablitybalanceapp);
+            ClickByJS(usedLiablitybalanceapp);
         }
         public void SaveSetting()
         {
-            Click(savesettings);
+            ClickByJS(savesettings);
           //  Thread.Sleep(5000);
         }
     }

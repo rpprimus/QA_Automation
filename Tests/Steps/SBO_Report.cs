@@ -239,7 +239,7 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Enter Date Opened Credit Card second")]
         public void ThenEnterDateOpenedCreditCardSecond()
         {
-            IWebElement OpenedDate3= wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("(//input[@data-placeholder='Date Opened'])[3]")));
+            IWebElement OpenedDate3 = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("(//input[@data-placeholder='Date Opened'])[3]")));
             OpenedDate3.Click();
             OpenedDate3.SendKeys("12/6/2013");
         }
@@ -424,18 +424,19 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Enter Model")]
         public void ThenEnterModel()
         {
-            IWebElement ClickOnModel = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[4]/div[5]/div[2]/div[3]/ng-select/div/span")));
-            ClickOnModel.Click();
-            IWebElement SelectModal = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[3]")));
-            SelectModal.Click();
+            //IJavaScriptExecutor exec = (IJavaScriptExecutor)_driver;
+            //IWebElement ClickOnModel = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("//*[@id='cdk-step-content-0-5']/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[4]/div[5]/div[2]/div[3]/ng-select/div/div/div[3]")));
+            //exec.ExecuteScript("arguments[0].click();", ClickOnModel);
+            //IWebElement SelectModal = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[5]")));
+            //SelectModal.Click();
         }
         [Then(@"Select Body")]
         public void ThenSelectBody()
         {
-            IWebElement ClickOnBody = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[4]/div[5]/div[2]/div[4]/ng-select/div")));
-            ClickOnBody.Click();
-            IWebElement SelectBody = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[5]")));
-            SelectBody.Click();
+            //IWebElement ClickOnBody = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[4]/div[5]/div[2]/div[4]/ng-select/div")));
+            //ClickOnBody.Click();
+            //IWebElement SelectBody = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[5]")));
+            //SelectBody.Click();
         }
 
         //[Then(@"Click on Next link for Co Borrower details")]

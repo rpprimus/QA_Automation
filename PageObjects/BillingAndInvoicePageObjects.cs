@@ -75,8 +75,8 @@ namespace Affordit_Automation.PageObjects
         }
         public void ClickSaveAndSubmitButtonForTieredPricing()
         {
-            Click(AdditionalSetting);
-            Click(SaveAndSubmitButtonForTieredPricing);
+            ClickByJS(AdditionalSetting);
+            ClickByJS(SaveAndSubmitButtonForTieredPricing);
         }
         public void ClickSaveSettings()
         {
