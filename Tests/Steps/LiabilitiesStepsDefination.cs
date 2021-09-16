@@ -58,32 +58,32 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Select Liabilities")]
         public void ThenSelectLiabilities()
         {
-            IWebElement SelectLiabilities = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[2]/div/ng-select/div/div/div[2]/input")));
-            SelectLiabilities.Click();
+            //IWebElement SelectLiabilities = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[2]/div/ng-select/div/div/div[2]/input")));
+            //SelectLiabilities.Click();
 
-            IWebElement Select = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[3]")));
-            Select.Click();
+            //IWebElement Select = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[3]")));
+            //Select.Click();
         }
         [Then(@"Click on Balance Amount")]
         public void ThenClickOnBalanceAmount()
         {
-            IWebElement BalanceAmount = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[3]/div[3]/mat-form-field/div/div[1]/div/input")));
-            BalanceAmount.Click();
-            BalanceAmount.SendKeys("2000");
+            //IWebElement BalanceAmount = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[3]/div[3]/mat-form-field/div/div[1]/div/input")));
+            //BalanceAmount.Click();
+            //BalanceAmount.SendKeys("2000");
 
         }
         [Then(@"Check the Special Interest Checkbox")]
         public void ThenCheckTheSpecialInterestCheckbox()
         {
-            IWebElement SpecialInterestCheckbox = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[4]/div[2]/div/mat-checkbox/label/span[1]")));
-            SpecialInterestCheckbox.Click();
+            //IWebElement SpecialInterestCheckbox = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[4]/div[2]/div/mat-checkbox/label/span[1]")));
+            //SpecialInterestCheckbox.Click();
         }
         [Then(@"Enter Special Interest Rate")]
         public void ThenEnterSpecialInterestRate()
         {
-            IWebElement EnterSpecialInterestRate = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[4]/div[2]/div[2]/mat-form-field/div/div[1]/div/input")));
-            EnterSpecialInterestRate.Click();
-            EnterSpecialInterestRate.SendKeys("4");
+            //IWebElement EnterSpecialInterestRate = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[4]/div[2]/div[2]/mat-form-field/div/div[1]/div/input")));
+            //EnterSpecialInterestRate.Click();
+            //EnterSpecialInterestRate.SendKeys("4");
         }
         [Then(@"Click Next Page Icon")]
         public void ThenClickNextPageIcon()

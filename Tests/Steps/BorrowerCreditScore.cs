@@ -67,7 +67,7 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Click on Page to see the Result")]
         public void ThenClickOnPageToSeeTheResult()
         {
-            _BorrowerCreditScorePageObject.ClickOnModal();
+            //_BorrowerCreditScorePageObject.ClickOnModal();
         }
 
     }

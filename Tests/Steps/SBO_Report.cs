@@ -367,34 +367,34 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Enter Account Number")]
         public void ThenEnterAccountNumber()
         {
-            IWebElement AccNo1 = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("(//input[@data-placeholder='Account Number'])[1]")));
-            AccNo1.SendKeys("70401260748384443");
+            //IWebElement AccNo1 = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("(//input[@data-placeholder='Account Number'])[1]")));
+            //AccNo1.SendKeys("70401260748384443");
         }
 
         [Then(@"Click the Dropdown Icon")]
         public void ThenClickTheDropdownIcon()
         {
-            _sbo.ClickOnDropdownIcon();
+            //_sbo.ClickOnDropdownIcon();
         }
         [Then(@"Click on Original Loan Amount")]
         public void ThenClickOnOriginalLoanAmount()
         {
-            _sbo.EnterOrignalLoanAmount();
+            //_sbo.EnterOrignalLoanAmount();
         }
         [Then(@"Click on Payment Amount")]
         public void ThenClickOnPaymentAmount()
         {
-            _sbo.EnterPaymentAmount();
+            //_sbo.EnterPaymentAmount();
         }
         [Then(@"Enter Terms")]
         public void ThenEnterTerms()
         {
-            _sbo.EnterTermLiability();
+            //_sbo.EnterTermLiability();
         }
         [Then(@"Enter Interest Rate")]
         public void ThenEnterInterestRate()
         {
-            _sbo.EnterInterestRate();
+            //_sbo.EnterInterestRate();
         }
 
 
