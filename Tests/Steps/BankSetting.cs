@@ -160,53 +160,53 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Select File to Upload")]
         public void ThenSelectFileToUpload()
         {
-            _bSPageObject.UploadFile();
+            //_bSPageObject.UploadFile();
         }
         [Then(@"Click on Upload Button to Upload File or Logo")]
         public void ThenClickOnUploadButtonToUploadFileOrLogo()
         {
-            IWebElement uploadbtn = _driver.FindElement(By.XPath("//button[contains(text(),'Upload')]"));
-            if (uploadbtn.Displayed)
-            {
-                _bSPageObject.ClickOnUploadButton();
-            }
+            //IWebElement uploadbtn = _driver.FindElement(By.XPath("//button[contains(text(),'Upload')]"));
+            //if (uploadbtn.Displayed)
+            //{
+            //    _bSPageObject.ClickOnUploadButton();
+            //}
         }
         [Then(@"Click on Delete button")]
         public void ThenClickOnDeleteButton()
         {
-            IWebElement delbtn = _driver.FindElement(By.XPath("//button//span[@class='fa fa-trash-alt']"));
-            if(delbtn.Displayed)
-                 _bSPageObject.ClickOnDeleteBtn();
+            //IWebElement delbtn = _driver.FindElement(By.XPath("//button//span[@class='fa fa-trash-alt']"));
+            //if(delbtn.Displayed)
+            //     _bSPageObject.ClickOnDeleteBtn();
         }
         [Then(@"Click on Confirm Button to Delete")]
         public void ThenClickOnConfirmButtonToDelete()
         {
-            IWebElement btnconfirm = _driver.FindElement(By.XPath("//button[text()=' Confirm ']"));
-            if(btnconfirm.Displayed)
-            _bSPageObject.ClickOnConfirm();
+            //IWebElement btnconfirm = _driver.FindElement(By.XPath("//button[text()=' Confirm ']"));
+            //if(btnconfirm.Displayed)
+            //_bSPageObject.ClickOnConfirm();
         }
         [Then(@"Click on Download button")]
         public void ThenClickOnDownloadButton()
         {
-            IWebElement downloadbtn = _driver.FindElement(By.XPath("//button//span[@class='fa fa-download']"));
-             if(downloadbtn.Displayed)
-                 _bSPageObject.ClickOnDownload();
+            //IWebElement downloadbtn = _driver.FindElement(By.XPath("//button//span[@class='fa fa-download']"));
+            // if(downloadbtn.Displayed)
+            //     _bSPageObject.ClickOnDownload();
         }
         [Then(@"Click on Edit button")]
         public void ThenClickOnEditButton()
         {
-            _bSPageObject.ClickOnEdit();
+            //_bSPageObject.ClickOnEdit();
         }
         [Then(@"Enter Data in filename")]
         public void ThenEnterDataInFilename()
         {
-            _bSPageObject.EnterFileName();
+            //_bSPageObject.EnterFileName();
         }
         [Then(@"Click on Update button")]
         public void ThenClickOnUpdateButton()
         {
-            _bSPageObject.ClickOnUpdateBtn();
-            Thread.Sleep(5000);
+            //_bSPageObject.ClickOnUpdateBtn();
+            //Thread.Sleep(5000);
         }
         [Then(@"Click on Loan Type")]
         public void ThenClickOnLoanType()
