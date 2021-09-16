@@ -165,23 +165,32 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Click on Upload Button to Upload File or Logo")]
         public void ThenClickOnUploadButtonToUploadFileOrLogo()
         {
-            _bSPageObject.ClickOnUploadButton();
+            IWebElement uploadbtn = _driver.FindElement(By.XPath("//button[contains(text(),'Upload')]"));
+            if (uploadbtn.Displayed)
+            {
+                _bSPageObject.ClickOnUploadButton();
+            }
         }
         [Then(@"Click on Delete button")]
         public void ThenClickOnDeleteButton()
         {
-            _bSPageObject.ClickOnDeleteBtn();
+            IWebElement delbtn = _driver.FindElement(By.XPath("//button//span[@class='fa fa-trash-alt']"));
+            if(delbtn.Displayed)
+                 _bSPageObject.ClickOnDeleteBtn();
         }
         [Then(@"Click on Confirm Button to Delete")]
         public void ThenClickOnConfirmButtonToDelete()
         {
+            IWebElement btnconfirm = _driver.FindElement(By.XPath("//button[text()=' Confirm ']"));
+            if(btnconfirm.Displayed)
             _bSPageObject.ClickOnConfirm();
         }
         [Then(@"Click on Download button")]
         public void ThenClickOnDownloadButton()
         {
-            _bSPageObject.ClickOnDownload();
-            Thread.Sleep(5000);
+            IWebElement downloadbtn = _driver.FindElement(By.XPath("//button//span[@class='fa fa-download']"));
+             if(downloadbtn.Displayed)
+                 _bSPageObject.ClickOnDownload();
         }
         [Then(@"Click on Edit button")]
         public void ThenClickOnEditButton()
@@ -217,7 +226,9 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Select Personal for Loan Group")]
         public void ThenSelectPersonalForLoanGroup()
         {
-            _bSPageObject.LoanGroup();
+            IWebElement element = _driver.FindElement(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div"));
+            if(!element.Displayed)
+               _bSPageObject.LoanGroup();
         }
         [Then(@"Enter Loan Type")]
         public void ThenEnterLoanType()
@@ -227,8 +238,10 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Click on Add Loan Type Button")]
         public void ThenClickOnAddLoanTypeButton()
         {
-            _bSPageObject.SaveLoanType();
-            Thread.Sleep(5000);
+            IWebElement savebtn = _driver.FindElement(By.XPath("/html/body/modal-container/div[2]/div/app-configurable-loan-type-modal/div[3]/button"));
+             if(savebtn.Enabled)
+                  _bSPageObject.SaveLoanType();
+           
         }
         [Then(@"Click on New Mortgage")]
         public void ThenClickOnNewMortgage()

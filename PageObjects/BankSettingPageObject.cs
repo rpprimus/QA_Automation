@@ -66,12 +66,13 @@ namespace Affordit_Automation.PageObjects
         public By resultdata => ByLocator("//tbody/tr/td[contains(text(),'Jay')]");
         public By savebtn => ByLocator("/html/body/app-root/app-private-layout/app-manage/div/div/div/app-misc-settings/div/div/form/div[1]/button");
         protected static readonly PropertyReader _propertyReader = PropertyReader.Instance;
+        
         public BankSettingPageObject(IWebDriver driver) : base(driver)
         {
         }
         public void GetResult()
         {
-            Click(resultdata);
+            ClickByJS(resultdata);
         }
         public void HomePage()
         {
@@ -79,7 +80,7 @@ namespace Affordit_Automation.PageObjects
         }
         public void SearchApplicant()
         {
-            SendKeys(search, "7350", true);
+            SendKeys(search, "jay", true);
             AutoItX.Send("{ENTER}");
         }
         public void MiscSettingLink()
@@ -114,7 +115,7 @@ namespace Affordit_Automation.PageObjects
         }
         public By LoanGroupOption()
         {
-            return ByLocator($"(//div//span[contains(text(),'Personal')])[4]");
+            return ByLocator($"(/html/body/ng-dropdown-panel/div/div[2]/div[2]/span)");
         }
         public void HamMenu()
         {
@@ -227,12 +228,14 @@ namespace Affordit_Automation.PageObjects
             // AutoItX auto = new AutoItX();
             AutoItX.WinActivate("Open");
             AutoItX.Send(_propertyReader.GetPath() + path);
+            Console.WriteLine(_propertyReader.GetPath() + path);
             //Thread.Sleep(1000);
             AutoItX.Send("{ENTER}");
            // Thread.Sleep(1000);
         }
         public void ClickOnUploadButton()
         {
+          // IWebDriver uploadbtn= 
             Click(uploadbtn);
           //  Thread.Sleep(2000);
         }
@@ -264,19 +267,20 @@ namespace Affordit_Automation.PageObjects
         }
         public void LoanType()
         {
-            Click(loantypebtn);
+            ClickByJS(loantypebtn);
         }
         public void LoanGroup()
         {
-            Click(LoanGroupOption());
+            ClickByJS(LoanGroupOption());
         }
         public void AddLoanType()
         {
-            Click(addloanbtn);
+            ClickByJS(addloanbtn);
         }
         public void DropdownLoanType()
         {
             Click(dropdownloantype);
+            Thread.Sleep(5000);
         }
         public void LoanTypeName()
         {
@@ -326,11 +330,11 @@ namespace Affordit_Automation.PageObjects
         public void ClickonLiabilityBalance()
         {
           //  Thread.Sleep(1000);
-            Click(usedLiablitybalanceapp);
+            ClickByJS(usedLiablitybalanceapp);
         }
         public void SaveSetting()
         {
-            Click(savesettings);
+            ClickByJS(savesettings);
           //  Thread.Sleep(5000);
         }
     }
