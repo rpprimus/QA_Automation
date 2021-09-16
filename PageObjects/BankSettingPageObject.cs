@@ -189,7 +189,7 @@ namespace Affordit_Automation.PageObjects
         }
         public void Promotioal_Offer()
         {
-            Click(promotional);
+            ClickByJS(promotional);
         }
         public void ToggleInsurance()
         {
