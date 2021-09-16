@@ -39,23 +39,23 @@ Scenario:Scenario_01_Solution Based Outcome Report for Primary
 	And Click on Next Link for Assets Page
 	And Click on Next Button to See the Result
 	And Click on Next Link for Liabilites Page
-	Then Click On Add Liability Button
-	Then Click on Liabilities Option
-	Then Select Liability from Dropdown
-	Then Enter Creditor Name
-	Then Enter Date Opened
-	Then Enter Balance Amount
-	Then Click the Dropdown Icon
-	Then Enter Account Number
-	Then Click on Original Loan Amount
-	Then Enter Terms
-	Then Enter Interest Rate
-	Then Enter Months Reviewed
-	Then Click on Payment Amount
-	Then Enter Year
-	Then Enter Make
-	Then Enter Model
-	Then Select Body
+	#Then Click On Add Liability Button
+	#Then Click on Liabilities Option
+	#Then Select Liability from Dropdown
+	#Then Enter Creditor Name
+	#Then Enter Date Opened
+	#Then Enter Balance Amount
+	#Then Click the Dropdown Icon
+	#Then Enter Account Number
+	#Then Click on Original Loan Amount
+	#Then Enter Terms
+	#Then Enter Interest Rate
+	#Then Enter Months Reviewed
+	#Then Click on Payment Amount
+	#Then Enter Year
+	#Then Enter Make
+	#Then Enter Model
+	#Then Select Body
 	#Then Click On Add Liability Button
 	#Then Click on Liabilities Option for first Credit Card
 	#Then Select Liability from Dropdown Credit Card
