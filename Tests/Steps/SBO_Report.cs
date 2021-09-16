@@ -401,18 +401,18 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Enter Year")]
         public void ThenEnterYear()
         {
-            IWebElement ClickonYear = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[4]/div[5]/div[2]/div[1]/ng-select/div")));
-            ClickonYear.Click();
-            IWebElement SelectYear = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[4]")));
-            SelectYear.Click();
+            //IWebElement ClickonYear = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div[2]/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[4]/div[5]/div[2]/div[1]/ng-select/div")));
+            //ClickonYear.Click();
+            //IWebElement SelectYear = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[4]")));
+            //SelectYear.Click();
         }
         [Then(@"Enter Make")]
         public void ThenEnterMake()
         {
-            IWebElement ClickOnMake = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[4]/div[5]/div[2]/div[2]/ng-select/div/div/div[2]/input")));
-            ClickOnMake.Click();
-            IWebElement SelectMake = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[26]")));
-            SelectMake.Click();
+            //IWebElement ClickOnMake = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/modal-container/div/div/app-create-new-application-modal/div/mat-horizontal-stepper/div[2]/div[6]/app-liabilities/div/form/div[1]/div[1]/app-liability/div/mat-card/div[4]/div[5]/div[2]/div[2]/ng-select/div/div/div[2]/input")));
+            //ClickOnMake.Click();
+            //IWebElement SelectMake = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.XPath("/html/body/ng-dropdown-panel/div/div[2]/div[26]")));
+            //SelectMake.Click();
         }
         [Then(@"Enter Model")]
         public void ThenEnterModel()
