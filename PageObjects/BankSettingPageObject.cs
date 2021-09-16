@@ -81,6 +81,7 @@ namespace Affordit_Automation.PageObjects
         public void SearchApplicant()
         {
             SendKeys(search, "jay", true);
+            Thread.Sleep(5000);
             AutoItX.Send("{ENTER}");
         }
         public void MiscSettingLink()

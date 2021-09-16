@@ -67,7 +67,7 @@ Scenario:Scenario_01_Solution Based Outcome Report for Primary
 	#Then Enter Credit Limit first
 	#Then Enter Months Reviewed Credit Card
 	#Then Click on Payment Amount Credit Card
-	#Then Click On Add Liability Button
+	##Then Click On Add Liability Button
 	#Then Click on Liabilities Option for Second Credit Card
 	#Then Select Liability from Dropdown Credit Card second
 	#Then Enter Creditor Name Credit Card second
