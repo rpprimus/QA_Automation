@@ -56,26 +56,26 @@ Scenario:Scenario_01_Solution Based Outcome Report for Primary
 	Then Enter Make
 	Then Enter Model
 	Then Select Body
-	Then Click On Add Liability Button
-	Then Click on Liabilities Option for first Credit Card
-	Then Select Liability from Dropdown Credit Card
-	Then Enter Creditor Name Credit Card
-	Then Enter Date Opened Credit Card
-	Then Enter Balance Amount Credit Card
-	Then Click the Dropdown Icon For first Credit Card
-	Then Enter Account Number Credit Card
-	Then Enter Credit Limit first
-	Then Enter Months Reviewed Credit Card
-	Then Click on Payment Amount Credit Card
-	Then Click On Add Liability Button
-	Then Click on Liabilities Option for Second Credit Card
-	Then Select Liability from Dropdown Credit Card second
-	Then Enter Creditor Name Credit Card second
-	Then Enter Date Opened Credit Card second
-	Then Enter Balance Amount Credit Card second
-	Then Click the Dropdown Icon Second Credit Card
-	Then Enter Account Number Credit Card second
-	Then Enter Credit Limit second
-	Then Enter Months Reviewed Credit Card second
-	Then Click on Payment Amount Credit Card second
+	#Then Click On Add Liability Button
+	#Then Click on Liabilities Option for first Credit Card
+	#Then Select Liability from Dropdown Credit Card
+	#Then Enter Creditor Name Credit Card
+	#Then Enter Date Opened Credit Card
+	#Then Enter Balance Amount Credit Card
+	#Then Click the Dropdown Icon For first Credit Card
+	#Then Enter Account Number Credit Card
+	#Then Enter Credit Limit first
+	#Then Enter Months Reviewed Credit Card
+	#Then Click on Payment Amount Credit Card
+	#Then Click On Add Liability Button
+	#Then Click on Liabilities Option for Second Credit Card
+	#Then Select Liability from Dropdown Credit Card second
+	#Then Enter Creditor Name Credit Card second
+	#Then Enter Date Opened Credit Card second
+	#Then Enter Balance Amount Credit Card second
+	#Then Click the Dropdown Icon Second Credit Card
+	#Then Enter Account Number Credit Card second
+	#Then Enter Credit Limit second
+	#Then Enter Months Reviewed Credit Card second
+	#Then Click on Payment Amount Credit Card second
 	Then Click Next for SBO Report
