@@ -336,7 +336,7 @@ namespace Affordit_Automation.Tests.Steps
         [Then(@"Click on the Data to See Effect on SBO Report")]
         public void ThenClickOnTheDataToSeeEffectOnSBOReport()
         {
-            _bSPageObject.GetResult();
+            //_bSPageObject.GetResult();
         }
     }
 }
