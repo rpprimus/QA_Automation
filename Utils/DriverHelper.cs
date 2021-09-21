@@ -22,7 +22,7 @@ namespace Affordit_Automation.Utils
 		{
 			WebDriver = driver;
 			Properties = PropertyReader.Instance;
-			timeOutSeconds = 25;
+			timeOutSeconds = 155;
 			//timeOutSeconds = Convert.ToInt16(ConfigurationManager.AppSettings["TimeOut"]);
 		}
 

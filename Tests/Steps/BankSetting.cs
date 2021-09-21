@@ -26,7 +26,7 @@ namespace Affordit_Automation.Tests.Steps
             _propertyReader = PropertyReader.Instance;
             _bSPageObject = new BankSettingPageObject(_driver);
             act = new Actions(_driver);
-            wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(35));
+            wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(50));
         }
         [When(@"Click on Hamburger Menu")]
         public void WhenClickOnHamberberMenu()

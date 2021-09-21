@@ -97,7 +97,7 @@ namespace Affordit_Automation.PageObjects
 		public void AddAllowableEmailHosts()
 		{
 			SendKeys(EntEmailHosts, "testing", true);
-			Click(Add);
+			ClickByJS(Add);
 		}
 		public void ClickCreateTenant()
 		{

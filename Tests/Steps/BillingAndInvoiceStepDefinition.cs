@@ -30,7 +30,7 @@ namespace Affordit_Automation.Tests.Steps
             _propertyReader = PropertyReader.Instance;
             _billingAndInvoicePageObjects = new BillingAndInvoicePageObjects(_driver);
             act = new Actions(driver);
-            wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(20));
+            wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(50));
         }
         [Then(@"Click on Billing and Invoice")]
         public void ThenClickOnBillingAndInvoice()
